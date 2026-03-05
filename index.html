@@ -1,0 +1,2948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kara Danvers | Modern Bio Links</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Default theme (will be overridden by JavaScript) */
+      --primary-color: #2ecc71;
+      --secondary-color: #3498db;
+      --accent-color: #9b59b6;
+      --background-color: #0a0f1a;
+      --text-color: #ecf0f1;
+      --text-muted: #95a5a6;
+      --danger-color: #e74c3c;
+      --warning-color: #f1c40f;
+      --success-color: #27ae60;
+      --border-radius: 16px;
+      --glass-effect: blur(15px);
+      --shadow-color: rgba(0, 0, 0, 0.4);
+      --theme-name: "Default";
+      --holiday-animation: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      transition: background-color 0.8s ease;
+    }
+
+    /* Tech Header Animation */
+    .tech-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      overflow: hidden;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      z-index: 1;
+    }
+
+    .tech-grid {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      animation: gridMove 20s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes gridMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-30px, -30px);
+      }
+    }
+
+    .circuit-lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .circuit-line {
+      position: absolute;
+      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+      height: 2px;
+      animation: circuitFlow 3s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes circuitFlow {
+      0% {
+        width: 0%;
+        opacity: 0;
+        left: 0;
+      }
+      10% {
+        opacity: 0.6;
+      }
+      90% {
+        opacity: 0.6;
+      }
+      100% {
+        width: 100%;
+        opacity: 0;
+        left: 100%;
+      }
+    }
+
+    .data-points {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .data-point {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-color);
+      animation: dataPulse 2s ease-in-out infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes dataPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+      }
+    }
+
+    .tech-icons {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tech-icon {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.4;
+      animation: iconFloat 8s ease-in-out infinite;
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+
+    @keyframes iconFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translateY(-15px) rotate(5deg);
+        opacity: 0.6;
+      }
+    }
+
+    .binary-rain {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .binary-digit {
+      position: absolute;
+      color: var(--primary-color);
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 12px;
+      opacity: 0;
+      animation: binaryFall linear infinite;
+      text-shadow: 0 0 3px currentColor;
+    }
+
+    @keyframes binaryFall {
+      0% {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(120px);
+        opacity: 0;
+      }
+    }
+
+    .hologram-effect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 20%,
+        transparent 80%,
+        rgba(255, 255, 255, 0.15) 100%
+      );
+      animation: hologramScan 4s linear infinite;
+      opacity: 0.2;
+    }
+
+    @keyframes hologramScan {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(200%);
+      }
+    }
+
+    /* Tech Footer Animation */
+    .tech-footer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      opacity: 0.4;
+      z-index: 1; /* Behind the text */
+    }
+
+    .tech-footer .tech-grid {
+      background-size: 20px 20px;
+      animation: footerGridMove 30s linear infinite;
+      opacity: 0.2;
+    }
+
+    @keyframes footerGridMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-20px, -20px);
+      }
+    }
+
+    .tech-footer .circuit-line {
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      height: 1px;
+      animation: footerCircuitFlow 4s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes footerCircuitFlow {
+      0% {
+        width: 0%;
+        opacity: 0;
+        left: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        width: 100%;
+        opacity: 0;
+        left: 100%;
+      }
+    }
+
+    .tech-footer .data-point {
+      width: 3px;
+      height: 3px;
+      animation: footerDataPulse 3s ease-in-out infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes footerDataPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+      }
+    }
+
+    .tech-footer .tech-icon {
+      font-size: 14px;
+      animation: footerIconFloat 12s ease-in-out infinite;
+      filter: drop-shadow(0 0 2px currentColor);
+      opacity: 0.2;
+    }
+
+    @keyframes footerIconFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.1;
+      }
+      50% {
+        transform: translateY(-10px) rotate(5deg);
+        opacity: 0.3;
+      }
+    }
+
+    .tech-footer .binary-digit {
+      font-size: 10px;
+      animation: footerBinaryFall linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes footerBinaryFall {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(80px);
+        opacity: 0;
+      }
+    }
+
+    .tech-footer .hologram-effect {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      animation: footerHologramScan 6s linear infinite;
+      opacity: 0.1;
+    }
+
+    @keyframes footerHologramScan {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(200%);
+      }
+    }
+
+    /* Tech Animation Styles */
+    .tech-animation {
+      position: relative;
+      width: 80px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .tech-binary {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: 10px;
+      font-family: monospace;
+      font-weight: bold;
+      opacity: 0.8;
+    }
+
+    .binary-digit-small {
+      animation: binaryBlink 1.5s infinite;
+      color: var(--primary-color);
+    }
+
+    @keyframes binaryBlink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .circuit-dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .circuit-dot {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      animation: circuitFlowSmall 3s linear infinite;
+    }
+
+    @keyframes circuitFlowSmall {
+      0% {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+    .tech-icon-small {
+      position: absolute;
+      font-size: 12px;
+      opacity: 0.7;
+      animation: techFloatSmall 2s ease-in-out infinite;
+    }
+
+    @keyframes techFloatSmall {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotate(5deg);
+      }
+    }
+
+    /* Holiday Background Animations */
+    .holiday-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    /* Christmas Snowflakes */
+    .snowflake {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    /* Halloween Bats */
+    .bat {
+      position: absolute;
+      color: #333;
+      font-size: 24px;
+      animation: fly linear infinite;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateX(-100px) translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateX(calc(100vw + 100px)) translateY(100px) rotate(360deg);
+      }
+    }
+
+    /* Valentine Hearts */
+    .heart {
+      position: absolute;
+      color: #e84393;
+      font-size: 20px;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* New Year Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 20px;
+      animation: confettiFall linear infinite;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+      }
+    }
+
+    /* Easter Bunnies */
+    .bunny {
+      position: absolute;
+      font-size: 24px;
+      animation: hop ease-in-out infinite;
+    }
+
+    @keyframes hop {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(10deg);
+      }
+    }
+
+    /* 4th of July Stars */
+    .star {
+      position: absolute;
+      color: #f1c40f;
+      font-size: 18px;
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    /* Spring Petals */
+    .petal {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(45deg, #ff6b9d, #ffd166);
+      border-radius: 50% 50% 50% 0;
+      animation: petalFall linear infinite;
+    }
+
+    @keyframes petalFall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    /* Summer Fireflies */
+    .firefly {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #f1c40f;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f;
+      animation: fireflyFloat ease-in-out infinite;
+    }
+
+    @keyframes fireflyFloat {
+      0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translate(20px, -20px);
+        opacity: 1;
+      }
+    }
+
+    /* Autumn Leaves */
+    .leaf {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #d35400;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: leafFall linear infinite;
+    }
+
+    @keyframes leafFall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+      }
+    }
+
+    .theme-indicator {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--card-background);
+      backdrop-filter: var(--glass-effect);
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-color);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 100;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-indicator:hover {
+      transform: scale(1.05);
+    }
+
+    .theme-indicator i {
+      color: var(--primary-color);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-card {
+      background: var(--card-background);
+      backdrop-filter: var(--glass-effect);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px var(--shadow-color);
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px var(--shadow-color);
+    }
+
+    .profile-header {
+      padding: 30px 25px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      opacity: 0.15;
+      z-index: 1;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    .profile-pic-container {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 3;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--primary-color);
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-name {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-color);
+      position: relative;
+      z-index: 3;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-bio {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 3;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .profile-stats {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .stat-item {
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .stat-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-color);
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .content-section {
+      max-height: 500px;
+      overflow-y: auto;
+      padding: 0 20px 20px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 25px 0 15px;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title i {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .section-title.expanded i {
+      transform: rotate(180deg);
+    }
+
+    .links-container {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .section.expanded .links-container {
+      display: flex;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: var(--text-color);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .link-item:hover::before {
+      opacity: 1;
+    }
+
+    .link-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      font-size: 22px;
+    }
+
+    .link-content {
+      flex: 1;
+    }
+
+    .link-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .link-description {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .link-arrow {
+      color: var(--text-muted);
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .link-item:hover .link-arrow {
+      transform: translateX(5px);
+      color: var(--primary-color);
+    }
+
+    .warning, .urgent-notice {
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: var(--border-radius);
+      font-size: 13px;
+      position: relative;
+      border-left: 3px solid;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: pulse 2s infinite;
+    }
+
+    .warning {
+      background: rgba(231, 76, 60, 0.1);
+      border-left-color: var(--danger-color);
+    }
+
+    .urgent-notice {
+      background: rgba(241, 196, 15, 0.1);
+      border-left-color: var(--warning-color);
+    }
+
+    @keyframes pulse {
+      0% { 
+        box-shadow: 0 0 0 0 rgba(241, 196, 15, 0.4);
+      }
+      70% { 
+        box-shadow: 0 0 0 10px rgba(241, 196, 15, 0);
+      }
+      100% { 
+        box-shadow: 0 0 0 0 rgba(241, 196, 15, 0);
+      }
+    }
+
+    .warning-title, .urgent-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .warning-title {
+      color: var(--danger-color);
+    }
+
+    .urgent-title {
+      color: var(--warning-color);
+    }
+
+    .mobile-options {
+      margin: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .action-btn {
+      padding: 14px;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-color);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .action-btn.primary {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .action-btn.secondary {
+      background: var(--secondary-color);
+      color: white;
+    }
+
+    .action-btn.danger {
+      background: rgba(231, 76, 60, 0.2);
+      color: var(--text-color);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+    }
+
+    .action-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer Styles */
+    .footer {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: var(--text-color);
+      border-radius: var(--border-radius);
+      margin-top: -20px;
+      overflow: hidden;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .footer p {
+      position: relative;
+      z-index: 3;
+      margin-bottom: 5px;
+    }
+
+    /* Protected Email */
+    .protected-email .obfuscated {
+      filter: blur(3px);
+      transition: filter 0.3s ease;
+      user-select: none;
+    }
+    
+    .protected-email:hover .obfuscated {
+      filter: blur(0);
+    }
+
+    /* Toast Notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-background);
+      color: var(--text-color);
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: var(--glass-effect);
+      box-shadow: 0 10px 30px var(--shadow-color);
+      pointer-events: none;
+    }
+    
+    .toast-notification.show {
+      opacity: 1;
+    }
+
+    /* Theme Preview */
+    .theme-preview {
+      position: fixed;
+      top: 60px;
+      right: 15px;
+      background: var(--card-background);
+      backdrop-filter: var(--glass-effect);
+      border-radius: var(--border-radius);
+      padding: 15px;
+      width: 200px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px var(--shadow-color);
+      z-index: 100;
+      display: none;
+    }
+
+    .theme-preview h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-preview h4 i {
+      color: var(--accent-color);
+    }
+
+    .theme-colors {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      justify-content: center;
+    }
+
+    .theme-color {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .theme-color:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-color.active {
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--primary-color);
+      transform: scale(1.2);
+    }
+
+    .theme-color::after {
+      content: '✏️';
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      font-size: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .theme-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .theme-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-color);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .theme-btn:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .theme-btn i {
+      font-size: 14px;
+    }
+
+    .current-theme-display {
+      font-size: 12px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px;
+      border-radius: 6px;
+    }
+
+    /* Color Picker */
+    #colorPicker {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--card-background);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      z-index: 1000;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      backdrop-filter: var(--glass-effect);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-width: 200px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        max-width: 90%;
+      }
+      
+      .profile-header {
+        padding: 25px 20px 15px;
+      }
+      
+      .profile-pic-container {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .profile-name {
+        font-size: 24px;
+      }
+      
+      .profile-bio {
+        font-size: 15px;
+      }
+      
+      .profile-stats {
+        gap: 15px;
+      }
+      
+      .stat-item {
+        min-width: 70px;
+      }
+      
+      .stat-value {
+        font-size: 12px;
+        height: 24px;
+      }
+      
+      .stat-label {
+        font-size: 9px;
+      }
+      
+      .tech-header {
+        height: 100px;
+      }
+      
+      .tech-footer {
+        height: 100%;
+      }
+      
+      .tech-icon {
+        font-size: 14px;
+      }
+      
+      .binary-digit {
+        font-size: 10px;
+      }
+      
+      .theme-preview {
+        position: fixed;
+        top: auto;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 300px;
+      }
+      
+      #colorPicker {
+        width: 90%;
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+      
+      .container {
+        max-width: 100%;
+      }
+      
+      .profile-header {
+        padding: 20px 15px 10px;
+      }
+      
+      .profile-stats {
+        gap: 10px;
+      }
+      
+      .stat-item {
+        min-width: 60px;
+      }
+      
+      .stat-value {
+        font-size: 11px;
+        height: 22px;
+      }
+      
+      .tech-header {
+        height: 80px;
+      }
+      
+      .tech-footer {
+        height: 100%;
+      }
+      
+      .tech-icon {
+        font-size: 12px;
+      }
+      
+      .binary-digit {
+        font-size: 8px;
+      }
+      
+      .content-section {
+        padding: 0 15px 20px;
+      }
+      
+      .link-item {
+        padding: 14px 16px;
+      }
+      
+      .theme-indicator {
+        top: 10px;
+        right: 10px;
+        font-size: 10px;
+        padding: 6px 12px;
+      }
+      
+      .theme-preview {
+        width: 90%;
+        max-width: 280px;
+      }
+      
+      #colorPicker {
+        width: 90%;
+        max-width: 260px;
+      }
+      
+      .footer {
+        padding: 15px;
+      }
+      
+      .footer-content {
+        padding: 12px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="holiday-background" id="holidayBackground"></div>
+
+  <div class="theme-indicator" onclick="toggleThemePreview()">
+    <i class='bx bx-palette'></i>
+    <span id="currentTheme">Theme: Default</span>
+  </div>
+
+  <div class="container">
+    <div class="profile-card">
+      <!-- Tech Header Animation -->
+      <div class="tech-header" id="techHeader"></div>
+      
+      <div class="profile-header">
+        <div class="profile-pic-container">
+          <img src="./img/kdpfp.png" alt="Kara Danvers" class="profile-pic" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Kara+Danvers&background=2ecc71&color=fff&bold=true&size=200';">
+        </div>
+        <h1 class="profile-name" id="profileName">Kara Danvers</h1>
+        <p class="profile-bio" id="profileBio">Content Creator • Tech Enthusiast • Holiday Lover</p>
+        
+        <div class="profile-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="locationStat">California 🇺🇸</div>
+            <div class="stat-label">LOCATION</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="pronounsStat">She/Her</div>
+            <div class="stat-label">PRONOUNS</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <div class="tech-animation" id="techAnimation"></div>
+            </div>
+            <div class="stat-label">TECH MODE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <!-- Social Media Section -->
+        <div class="section">
+          <div class="section-title" onclick="toggleSection(this)">
+            <span><i class='bx bx-globe'></i> Social Media</span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="links-container">
+            <a href="https://www.youtube.com/@DanversKara" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bxl-youtube'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">YouTube</div>
+                <div class="link-description">Subscribe for tech reviews and tutorials</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            
+            <a href="https://social.chiefgyk3d.com/@KaraDanvers" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bxl-mastodon'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Mastodon</div>
+                <div class="link-description">Follow me on the fediverse</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            <a href="https://social.vivaldi.net/@KaraDanvers" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bxl-mastodon'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Vivaldi Social</div>
+                <div class="link-description">Follow me on the fediverse</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            
+            <a href="https://bsky.app/profile/karadanvers.bsky.social" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bxl-twitter'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Bluesky</div>
+                <div class="link-description">Connect with me on Bluesky</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://vido.social/@karadanvers" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-plus'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Loops Streaming</div>
+                <div class="link-description">Loops is federated, open-source Video Streaming</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <div class="warning">
+              <div class="warning-title"><i class='bx bx-error-alt'></i> Identity Warning</div>
+              <p class="warning-text">I'm not on X or Meta platforms (Facebook, Instagram, Threads, WhatsApp, etc.). Any profile you find there is unauthorized.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="section">
+          <div class="section-title" onclick="toggleSection(this)">
+            <span><i class='bx bx-envelope'></i> Contact Info</span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="links-container">
+            <div class="link-item protected-email" onclick="revealAndCopyEmail()">
+              <div class="link-icon">
+                <i class='bx bx-mail-send'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Email Address</div>
+                <div class="link-description">
+                  <span class="protected-email">
+                    <span class="obfuscated">[Click to reveal email]</span>
+                  </span>
+                </div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </div>
+            
+            <div class="link-item" onclick="copyAddress()">
+              <div class="link-icon">
+                <i class='bx bx-home'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">PO Box Address</div>
+                <div class="link-description">PO BOX 1357, LINDSAY, CA 93247</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </div>
+
+            <a href="https://signal.group/#CjQKIOf90ialIxiQXubuqSKzyA-andhQqr94c6T943fmr5wOEhA6zSJZXLfxSAZ7XAIdcHV4" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-plus'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Signal.org</div>
+                <div class="link-description">Video Calling, Chatting, Groups Chats and More</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            
+            <div class="urgent-notice">
+              <div class="urgent-title"><i class='bx bx-error'></i> URGENT NOTICE</div>
+              <p class="urgent-text">Unsolicited emails are automatically deleted, rarely read, and often reported as spam. If you're feeling bold, send a self-addressed stamped envelope to our P.O. Box. Waste your own postage, not our time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Links Section -->
+        <div class="section">
+          <div class="section-title" onclick="toggleSection(this)">
+            <span><i class='bx bx-link'></i> Other Links</span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="links-container">
+            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35460" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-mouse'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Mouse without Borders KVM</div>
+                <div class="link-description">Control multiple PCs with one mouse</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            
+            <a href="https://myref.info/" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-world'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">My Referral Links</div>
+                <div class="link-description">All my referral links in one place</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            
+            <a href="https://www.wattpad.com/user/KarasPage" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-book-reader'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Kara's Books</div>
+                <div class="link-description">Read my stories on Wattpad</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/hz/wishlist/ls/ILIK40MLBUKX" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-heart'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Amazon Wishlist</div>
+                <div class="link-description">Send a gift if you're feeling generous</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://i.capitalone.com/Jfz7p7JL4" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-credit-card'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Capital One Credit Card</div>
+                <div class="link-description">Great credit card with rewards</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1Bn2uKqPepcsobqWnVM6LrqnCYX2K93b5?usp=sharing" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bxl-google-drive'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">ScamAzon at Amazon</div>
+                <div class="link-description">Documentation of Amazon scams</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+            
+            <a href="https://karasprofile.blogspot.com/2025/12/you-have-to-watch-out-for-possible.html" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-bug'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Roblox Scams</div>
+                <div class="link-description">Watch out for possible scams</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="#" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-car'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Coming Soon</div>
+                <div class="link-description">More links and resources</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section">
+          <div class="section-title" onclick="toggleSection(this)">
+            <span><i class='bx bx-cog'></i> Services & Referrals</span>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="links-container">
+            <a href="https://tacobell.onelink.me/z7Q9/referral?deep_link_sub2=9ncavp" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-restaurant'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Taco Bell Rewards</div>
+                <div class="link-description">Join Taco Bell Rewards program</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://airtalkwireless.com/lifeline-enrollment?referral_code=9anezcn&utm_source=refer" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-mobile-alt'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Free Phone + Lifeline</div>
+                <div class="link-description">Get a free phone with Lifeline</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://app.privacy.com/join/B5DWR" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-shield-alt-2'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Privacy.com</div>
+                <div class="link-description">Generate virtual cards for safety</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://voip.ms/en/invite/MjM2MjQ4" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-phone-call'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">voip.ms VOIP</div>
+                <div class="link-description">Affordable VOIP phone service</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://www.sofi.com/invite/money?gcp=54b4e74d-7d21-4e90-ba93-3f59ee80e893&isAliasGcp=false" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-bank'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">SoFi Banking</div>
+                <div class="link-description">Modern banking with great rewards</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+
+            <a href="https://cash.app/app/VMNWCV2" target="_blank" class="link-item">
+              <div class="link-icon">
+                <i class='bx bx-dollar-circle'></i>
+              </div>
+              <div class="link-content">
+                <div class="link-title">Join CashApp</div>
+                <div class="link-description">Send and receive money easily</div>
+              </div>
+              <div class="link-arrow">
+                <i class='bx bx-chevron-right'></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mobile-options">
+          <button class="action-btn primary" onclick="shareProfile()">
+            <i class='bx bx-share-alt'></i>SHARE THIS PAGE
+          </button>
+          <button class="action-btn danger" onclick="reportProfile()">
+            <i class='bx bx-flag'></i>REPORT PROFILE
+          </button>
+          <button class="action-btn secondary" onclick="toggleThemePreview()">
+            <i class='bx bx-palette'></i>VIEW THEMES
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="tech-footer" id="techFooter"></div>
+        <div class="footer-content">
+          <p>© 2023 Kara Danvers. All links are verified and safe.</p>
+          <p style="margin-top: 5px; font-size: 11px;">Theme updates automatically on the 1st of each month at 12am PST</p>
+          <p style="margin-top: 5px; font-size: 10px; opacity: 0.7;" id="currentDateDisplay"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification"></div>
+
+  <!-- Theme Preview -->
+  <div class="theme-preview" id="themePreview">
+    <h4><i class='bx bx-palette'></i> Theme Preview</h4>
+    <div class="current-theme-display" id="previewThemeName">Default Theme</div>
+    <div class="theme-colors">
+      <div class="theme-color" style="background-color: var(--primary-color);" title="Click to edit primary color"></div>
+      <div class="theme-color" style="background-color: var(--secondary-color);" title="Click to edit secondary color"></div>
+      <div class="theme-color" style="background-color: var(--accent-color);" title="Click to edit accent color"></div>
+      <div class="theme-color" style="background-color: var(--background-color);" title="Click to edit background color"></div>
+    </div>
+    <div class="theme-selector">
+      <button class="theme-btn" onclick="applyRandomTheme()">
+        <i class='bx bx-shuffle'></i>Random Theme
+      </button>
+      <button class="theme-btn" onclick="applyNextTheme()">
+        <i class='bx bx-chevron-right'></i>Next Month
+      </button>
+      <button class="theme-btn" onclick="resetToMonthlyTheme()">
+        <i class='bx bx-reset'></i>Reset to Current
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Tech Header Animation Functions
+    function createTechHeader() {
+      const container = document.getElementById('techHeader');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      // Get current theme colors
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+      const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color');
+      
+      // Create animated grid background
+      const grid = document.createElement('div');
+      grid.className = 'tech-grid';
+      container.appendChild(grid);
+      
+      // Create circuit lines
+      const circuitLines = document.createElement('div');
+      circuitLines.className = 'circuit-lines';
+      
+      for (let i = 0; i < 5; i++) {
+        const line = document.createElement('div');
+        line.className = 'circuit-line';
+        line.style.top = `${20 + i * 20}%`;
+        line.style.animationDelay = `${i * 0.5}s`;
+        circuitLines.appendChild(line);
+      }
+      container.appendChild(circuitLines);
+      
+      // Create data points
+      const dataPoints = document.createElement('div');
+      dataPoints.className = 'data-points';
+      
+      for (let i = 0; i < 12; i++) {
+        const point = document.createElement('div');
+        point.className = 'data-point';
+        point.style.left = `${Math.random() * 100}%`;
+        point.style.top = `${Math.random() * 100}%`;
+        point.style.animationDelay = `${Math.random() * 2}s`;
+        dataPoints.appendChild(point);
+      }
+      container.appendChild(dataPoints);
+      
+      // Create tech icons
+      const techIcons = document.createElement('div');
+      techIcons.className = 'tech-icons';
+      
+      const icons = ['💻', '📱', '🖥️', '⌨️', '🖱️', '📡', '🔌', '⚡', '🔋', '💾', '💿', '📀'];
+      
+      for (let i = 0; i < 6; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'tech-icon';
+        icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+        icon.style.left = `${Math.random() * 100}%`;
+        icon.style.top = `${Math.random() * 100}%`;
+        icon.style.animationDelay = `${Math.random() * 4}s`;
+        icon.style.color = i % 3 === 0 ? primaryColor : (i % 3 === 1 ? secondaryColor : accentColor);
+        techIcons.appendChild(icon);
+      }
+      container.appendChild(techIcons);
+      
+      // Create binary rain
+      const binaryRain = document.createElement('div');
+      binaryRain.className = 'binary-rain';
+      
+      for (let i = 0; i < 15; i++) {
+        const binary = document.createElement('div');
+        binary.className = 'binary-digit';
+        binary.textContent = Math.random() > 0.5 ? '1' : '0';
+        binary.style.left = `${Math.random() * 100}%`;
+        binary.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        binary.style.animationDelay = `${Math.random() * 3}s`;
+        binary.style.color = Math.random() > 0.5 ? primaryColor : secondaryColor;
+        binaryRain.appendChild(binary);
+      }
+      container.appendChild(binaryRain);
+      
+      // Create hologram effect
+      const hologram = document.createElement('div');
+      hologram.className = 'hologram-effect';
+      container.appendChild(hologram);
+      
+      // Animate binary digits
+      setInterval(() => {
+        const digits = binaryRain.querySelectorAll('.binary-digit');
+        digits.forEach(digit => {
+          digit.textContent = Math.random() > 0.5 ? '1' : '0';
+        });
+      }, 1000);
+    }
+
+    // Tech Footer Animation Function
+    function createTechFooter() {
+      const container = document.getElementById('techFooter');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      // Get current theme colors
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+      const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color');
+      
+      // Create animated grid background
+      const grid = document.createElement('div');
+      grid.className = 'tech-grid';
+      container.appendChild(grid);
+      
+      // Create subtle circuit lines
+      const circuitLines = document.createElement('div');
+      circuitLines.className = 'circuit-lines';
+      
+      for (let i = 0; i < 2; i++) {
+        const line = document.createElement('div');
+        line.className = 'circuit-line';
+        line.style.top = `${30 + i * 30}%`;
+        line.style.animationDelay = `${i * 0.8}s`;
+        circuitLines.appendChild(line);
+      }
+      container.appendChild(circuitLines);
+      
+      // Create subtle data points
+      const dataPoints = document.createElement('div');
+      dataPoints.className = 'data-points';
+      
+      for (let i = 0; i < 6; i++) {
+        const point = document.createElement('div');
+        point.className = 'data-point';
+        point.style.left = `${Math.random() * 100}%`;
+        point.style.top = `${Math.random() * 100}%`;
+        point.style.animationDelay = `${Math.random() * 3}s`;
+        dataPoints.appendChild(point);
+      }
+      container.appendChild(dataPoints);
+      
+      // Create subtle tech icons
+      const techIcons = document.createElement('div');
+      techIcons.className = 'tech-icons';
+      
+      const icons = ['💻', '📱', '🔌', '⚡', '🔋', '💾'];
+      
+      for (let i = 0; i < 3; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'tech-icon';
+        icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+        icon.style.left = `${Math.random() * 100}%`;
+        icon.style.top = `${Math.random() * 100}%`;
+        icon.style.animationDelay = `${Math.random() * 6}s`;
+        icon.style.color = i % 3 === 0 ? primaryColor : (i % 3 === 1 ? secondaryColor : accentColor);
+        techIcons.appendChild(icon);
+      }
+      container.appendChild(techIcons);
+      
+      // Create subtle binary rain
+      const binaryRain = document.createElement('div');
+      binaryRain.className = 'binary-rain';
+      
+      for (let i = 0; i < 8; i++) {
+        const binary = document.createElement('div');
+        binary.className = 'binary-digit';
+        binary.textContent = Math.random() > 0.5 ? '1' : '0';
+        binary.style.left = `${Math.random() * 100}%`;
+        binary.style.animationDuration = `${Math.random() * 4 + 3}s`;
+        binary.style.animationDelay = `${Math.random() * 4}s`;
+        binary.style.color = Math.random() > 0.5 ? primaryColor : secondaryColor;
+        binaryRain.appendChild(binary);
+      }
+      container.appendChild(binaryRain);
+      
+      // Create subtle hologram effect
+      const hologram = document.createElement('div');
+      hologram.className = 'hologram-effect';
+      container.appendChild(hologram);
+      
+      // Animate binary digits
+      setInterval(() => {
+        const digits = binaryRain.querySelectorAll('.binary-digit');
+        digits.forEach(digit => {
+          digit.textContent = Math.random() > 0.5 ? '1' : '0';
+        });
+      }, 1500);
+    }
+
+    // Tech Animation Functions
+    function createTechAnimation() {
+      const container = document.getElementById('techAnimation');
+      if (!container) return;
+      
+      // Create binary stream
+      const binary = document.createElement('div');
+      binary.className = 'tech-binary';
+      
+      // Generate binary digits
+      const binaryLength = 8;
+      for (let i = 0; i < binaryLength; i++) {
+        const digit = document.createElement('span');
+        digit.className = 'binary-digit-small';
+        digit.textContent = Math.random() > 0.5 ? '1' : '0';
+        digit.style.animationDelay = `${i * 0.1}s`;
+        binary.appendChild(digit);
+      }
+      
+      // Create circuit dots
+      const circuit = document.createElement('div');
+      circuit.className = 'circuit-dots';
+      
+      const dotCount = 5;
+      for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'circuit-dot';
+        dot.style.left = `${(i + 1) * (80 / (dotCount + 1))}%`;
+        dot.style.animationDelay = `${i * 0.3}s`;
+        circuit.appendChild(dot);
+      }
+      
+      // Create tech icons
+      const icons = document.createElement('div');
+      const iconTypes = ['💻', '📱', '⚡', '🔧', '🔌'];
+      
+      for (let i = 0; i < 3; i++) {
+        const icon = document.createElement('span');
+        icon.className = 'tech-icon-small';
+        icon.textContent = iconTypes[Math.floor(Math.random() * iconTypes.length)];
+        icon.style.left = `${20 + i * 30}%`;
+        icon.style.animationDelay = `${i * 0.5}s`;
+        icons.appendChild(icon);
+      }
+      
+      // Clear and add new elements
+      container.innerHTML = '';
+      container.appendChild(binary);
+      container.appendChild(circuit);
+      container.appendChild(icons);
+      
+      // Animate binary digits
+      setInterval(() => {
+        const digits = binary.querySelectorAll('.binary-digit-small');
+        digits.forEach(digit => {
+          digit.textContent = Math.random() > 0.5 ? '1' : '0';
+        });
+      }, 1000);
+    }
+
+    // Monthly Themes Configuration for 2026 with animations - FIXED EASTER THEME
+    const monthlyThemes = {
+      0: { // January 2026 (Winter)
+        name: "Winter Frost 2026",
+        primary: "#3498db",
+        secondary: "#1abc9c",
+        accent: "#9b59b6",
+        background: "#0c1b33",
+        text: "#ecf0f1",
+        bio: "Embracing 2026 with fresh tech insights and cozy winter content ❄️",
+        holidayAnimation: "snow",
+        monthName: "January",
+        year: 2026
+      },
+      1: { // February 2026 (Valentine's)
+        name: "Valentine's Love 2026",
+        primary: "#e74c3c",
+        secondary: "#e84393",
+        accent: "#fd79a8",
+        background: "#2c0b1a",
+        text: "#fdf2f8",
+        bio: "Spreading love and tech tips this Valentine's season 2026 💖",
+        holidayAnimation: "hearts",
+        monthName: "February",
+        year: 2026
+      },
+      2: { // March 2026 (St. Patrick's Day)
+        name: "St. Patrick's Day 2026",
+        primary: "#2ecc71",
+        secondary: "#f1c40f",
+        accent: "#27ae60",
+        background: "#0c2a1c",
+        text: "#ecf0f1",
+        bio: "Feeling lucky with new tech discoveries this St. Patrick's Day! 🍀",
+        holidayAnimation: "fireflies",
+        monthName: "March",
+        year: 2026
+      },
+      3: { // April 2026 (Spring/Easter) - FIXED: Better colors for readability
+        name: "Easter 2026",
+        primary: "#9b59b6",   // Soft purple
+        secondary: "#e84393",  // Pink
+        accent: "#f1c40f",     // Gold
+        background: "#2a1f3a", // Dark purple background (was white)
+        text: "#f8f9fa",       // Light text (was dark)
+        bio: "Fresh tech reviews and creative experiments this Easter 2026 🌼",
+        holidayAnimation: "bunnies",
+        monthName: "April",
+        year: 2026
+      },
+      4: { // May 2026 (Spring)
+        name: "May Flowers 2026",
+        primary: "#9b59b6",
+        secondary: "#e74c3c",
+        accent: "#1abc9c",
+        background: "#1a0c2a",
+        text: "#f8f9fa",
+        bio: "Blooming with new content and tech discoveries in 2026 🌺",
+        holidayAnimation: "petals",
+        monthName: "May",
+        year: 2026
+      },
+      5: { // June 2026 (Summer/Pride)
+        name: "Summer Pride 2026",
+        primary: "#e74c3c",
+        secondary: "#f39c12",
+        accent: "#3498db",
+        background: "#2a0c1a",
+        text: "#ffffff",
+        bio: "Celebrating diversity in tech and creativity this Pride month 2026 🌈",
+        holidayAnimation: "fireflies",
+        monthName: "June",
+        year: 2026
+      },
+      6: { // July 2026 (Independence Day)
+        name: "4th of July 2026",
+        primary: "#e74c3c",
+        secondary: "#3498db",
+        accent: "#ffffff",
+        background: "#0c1a2a",
+        text: "#ffffff",
+        bio: "Celebrating freedom and innovation this Independence Day 2026! 🇺🇸",
+        holidayAnimation: "stars",
+        monthName: "July",
+        year: 2026
+      },
+      7: { // August 2026 (Summer)
+        name: "Summer 2026",
+        primary: "#e67e22",
+        secondary: "#e74c3c",
+        accent: "#f1c40f",
+        background: "#2a1c0c",
+        text: "#fdf2e9",
+        bio: "Enjoying summer vibes with hot tech takes in 2026 🌅",
+        holidayAnimation: "fireflies",
+        monthName: "August",
+        year: 2026
+      },
+      8: { // September 2026 (Labor Day)
+        name: "Labor Day 2026",
+        primary: "#d35400",
+        secondary: "#3498db",
+        accent: "#f1c40f",
+        background: "#1a2a2a",
+        text: "#ecf0f1",
+        bio: "Honoring hard work and innovation this Labor Day 2026 🔧",
+        holidayAnimation: "leaves",
+        monthName: "September",
+        year: 2026
+      },
+      9: { // October 2026 (Halloween)
+        name: "Halloween 2026",
+        primary: "#9b59b6",
+        secondary: "#f1c40f",
+        accent: "#e74c3c",
+        background: "#1a0c1a",
+        text: "#f8f9fa",
+        bio: "Spooky tech tricks and treats for Halloween 2026! 🎃👻",
+        holidayAnimation: "bats",
+        monthName: "October",
+        year: 2026
+      },
+      10: { // November 2026 (Thanksgiving)
+        name: "Thanksgiving 2026",
+        primary: "#d35400",
+        secondary: "#f39c12",
+        accent: "#27ae60",
+        background: "#2a1c0c",
+        text: "#fdf2e9",
+        bio: "Grateful for tech and community this Thanksgiving 2026 🦃",
+        holidayAnimation: "leaves",
+        monthName: "November",
+        year: 2026
+      },
+      11: { // December 2026 (Christmas)
+        name: "Christmas 2026",
+        primary: "#e74c3c",
+        secondary: "#2ecc71",
+        accent: "#f1c40f",
+        background: "#0c1a0c",
+        text: "#ffffff",
+        bio: "Spreading holiday cheer with tech gifts and festive content 2026 🎄",
+        holidayAnimation: "snow",
+        monthName: "December",
+        year: 2026
+      }
+    };
+
+    // Holiday Overrides for 2026 - FIXED EASTER OVERRIDE
+    const holidayOverrides = {
+      "01-01": { // New Year's Day 2026
+        name: "New Year's Day 2026",
+        primary: "#3498db",
+        secondary: "#9b59b6",
+        accent: "#1abc9c",
+        background: "#0c1b33",
+        text: "#ecf0f1",
+        bio: "Happy New Year 2026! Fresh starts and exciting tech ahead! 🎉",
+        holidayAnimation: "confetti"
+      },
+      "02-14": { // Valentine's Day 2026
+        name: "Valentine's Day 2026",
+        primary: "#e84393",
+        secondary: "#e74c3c",
+        accent: "#fd79a8",
+        background: "#2c0b1a",
+        text: "#fdf2f8",
+        bio: "Happy Valentine's Day 2026! Sending love and tech tips to all! 💝",
+        holidayAnimation: "hearts"
+      },
+      "03-17": { // St. Patrick's Day 2026
+        name: "St. Patrick's Day 2026",
+        primary: "#2ecc71",
+        secondary: "#27ae60",
+        accent: "#f1c40f",
+        background: "#0c1a0c",
+        text: "#ffffff",
+        bio: "Happy St. Patrick's Day 2026! May your code be bug-free! 🍀",
+        holidayAnimation: "fireflies"
+      },
+      "04-05": { // Easter 2026 (actual date is April 5, 2026) - FIXED: Better readability
+        name: "Easter Sunday 2026",
+        primary: "#9b59b6",  // Soft purple
+        secondary: "#e84393", // Pink
+        accent: "#f1c40f",    // Gold
+        background: "#2a1f3a", // Dark purple background (was white)
+        text: "#f8f9fa",      // Light text (was dark)
+        bio: "Happy Easter 2026! Fresh starts and new tech eggs-periments! 🐰",
+        holidayAnimation: "bunnies"
+      },
+      "04-01": { // April Fool's Day 2026
+        name: "April Fool's Day 2026",
+        primary: "#f1c40f",
+        secondary: "#9b59b6",
+        accent: "#e74c3c",
+        background: "#2a1c0c",
+        text: "#ffffff",
+        bio: "Watch out for tech pranks and funny bugs today! 🤡",
+        holidayAnimation: "confetti"
+      },
+      "07-04": { // Independence Day 2026
+        name: "4th of July 2026",
+        primary: "#e74c3c",
+        secondary: "#3498db",
+        accent: "#ffffff",
+        background: "#0c1a2a",
+        text: "#ffffff",
+        bio: "Celebrating freedom and innovation this Independence Day 2026! 🇺🇸",
+        holidayAnimation: "stars"
+      },
+      "09-07": { // Labor Day 2026 (first Monday in September)
+        name: "Labor Day 2026",
+        primary: "#3498db",
+        secondary: "#f1c40f",
+        accent: "#2ecc71",
+        background: "#1a2a2a",
+        text: "#ecf0f1",
+        bio: "Honoring innovation and hard work this Labor Day 2026! 🔧",
+        holidayAnimation: "leaves"
+      },
+      "10-31": { // Halloween 2026
+        name: "Halloween 2026",
+        primary: "#9b59b6",
+        secondary: "#f1c40f",
+        accent: "#e74c3c",
+        background: "#1a0c1a",
+        text: "#f8f9fa",
+        bio: "Happy Halloween 2026! Tech tricks and spooky streams tonight! 🎃👻",
+        holidayAnimation: "bats"
+      },
+      "11-26": { // Thanksgiving 2026 (4th Thursday in November)
+        name: "Thanksgiving 2026",
+        primary: "#d35400",
+        secondary: "#f39c12",
+        accent: "#27ae60",
+        background: "#2a1c0c",
+        text: "#fdf2e9",
+        bio: "Giving thanks for amazing tech and community in 2026! 🦃",
+        holidayAnimation: "leaves"
+      },
+      "12-25": { // Christmas Day 2026
+        name: "Christmas Day 2026",
+        primary: "#e74c3c",
+        secondary: "#2ecc71",
+        accent: "#f1c40f",
+        background: "#0c1a0c",
+        text: "#ffffff",
+        bio: "Merry Christmas 2026! Wishing you joy and amazing tech discoveries! 🎄🎁",
+        holidayAnimation: "snow"
+      }
+    };
+
+    // Global variables
+    let currentDate = new Date();
+    let currentTheme = null;
+    let isPreviewOpen = false;
+
+    // Fixed: Convert to PST (Pacific Standard Time)
+    function getPSTDate() {
+      const now = new Date();
+      // PST is UTC-8 (Pacific Standard Time)
+      // Get current time in UTC
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      // Convert to PST (UTC-8)
+      const pstOffset = 8; // Hours behind UTC
+      const pstTime = new Date(utc - (pstOffset * 3600000));
+      return pstTime;
+    }
+
+    // Get theme for current date
+    function getThemeForDate(date) {
+      const month = date.getMonth();
+      const day = date.getDate();
+      const monthStr = (month + 1).toString().padStart(2, '0');
+      const dayStr = day.toString().padStart(2, '0');
+      const dateKey = `${monthStr}-${dayStr}`;
+      
+      // Check for holiday override first
+      if (holidayOverrides[dateKey]) {
+        return { ...holidayOverrides[dateKey], isHoliday: true };
+      }
+      
+      // Otherwise return monthly theme
+      if (monthlyThemes[month]) {
+        return { ...monthlyThemes[month], isHoliday: false };
+      }
+      
+      // Fallback to default
+      return {
+        name: "Default Theme",
+        primary: "#2ecc71",
+        secondary: "#3498db",
+        accent: "#9b59b6",
+        background: "#0a0f1a",
+        text: "#ecf0f1",
+        bio: "Content Creator • Tech Enthusiast • Holiday Lover",
+        holidayAnimation: null,
+        monthName: "Default",
+        year: new Date().getFullYear()
+      };
+    }
+
+    // Create holiday animations
+    function createHolidayAnimation(type) {
+      const container = document.getElementById('holidayBackground');
+      container.innerHTML = '';
+      
+      if (!type) return;
+      
+      let elements = [];
+      const elementCount = type === 'snow' ? 100 : 
+                          type === 'hearts' ? 30 :
+                          type === 'bats' ? 20 :
+                          type === 'confetti' ? 50 :
+                          type === 'bunnies' ? 15 :
+                          type === 'stars' ? 25 :
+                          type === 'petals' ? 40 :
+                          type === 'fireflies' ? 30 :
+                          type === 'leaves' ? 35 : 0;
+      
+      for (let i = 0; i < elementCount; i++) {
+        const element = document.createElement('div');
+        
+        switch(type) {
+          case 'snow':
+            element.className = 'snowflake';
+            element.style.width = `${Math.random() * 10 + 5}px`;
+            element.style.height = element.style.width;
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.opacity = Math.random() * 0.8 + 0.2;
+            element.style.backgroundColor = 'white';
+            element.style.boxShadow = '0 0 5px rgba(255, 255, 255, 0.5)';
+            break;
+            
+          case 'hearts':
+            element.className = 'heart';
+            element.innerHTML = '❤️';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.fontSize = `${Math.random() * 15 + 15}px`;
+            element.style.animationDuration = `${Math.random() * 10 + 10}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.filter = `hue-rotate(${Math.random() * 60}deg)`;
+            break;
+            
+          case 'bats':
+            element.className = 'bat';
+            element.innerHTML = '🦇';
+            element.style.top = `${Math.random() * 100}vh`;
+            element.style.animationDuration = `${Math.random() * 15 + 10}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.opacity = Math.random() * 0.6 + 0.4;
+            break;
+            
+          case 'confetti':
+            element.className = 'confetti';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 60%)`;
+            element.style.animationDuration = `${Math.random() * 5 + 3}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.transform = `rotate(${Math.random() * 45}deg)`;
+            break;
+            
+          case 'bunnies':
+            element.className = 'bunny';
+            element.innerHTML = '🐰';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.top = `${Math.random() * 100}vh`;
+            element.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            element.style.animationDelay = `${Math.random() * 2}s`;
+            element.style.fontSize = `${Math.random() * 15 + 20}px`;
+            break;
+            
+          case 'stars':
+            element.className = 'star';
+            element.innerHTML = '⭐';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.top = `${Math.random() * 100}vh`;
+            element.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            element.style.animationDelay = `${Math.random() * 2}s`;
+            break;
+            
+          case 'petals':
+            element.className = 'petal';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.animationDuration = `${Math.random() * 8 + 4}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.opacity = Math.random() * 0.7 + 0.3;
+            element.style.transform = `rotate(${Math.random() * 360}deg)`;
+            break;
+            
+          case 'fireflies':
+            element.className = 'firefly';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.top = `${Math.random() * 100}vh`;
+            element.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            element.style.animationDelay = `${Math.random() * 3}s`;
+            break;
+            
+          case 'leaves':
+            element.className = 'leaf';
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.animationDuration = `${Math.random() * 10 + 5}s`;
+            element.style.animationDelay = `${Math.random() * 5}s`;
+            element.style.opacity = Math.random() * 0.8 + 0.2;
+            element.style.backgroundColor = `hsl(${Math.random() * 30 + 20}, 80%, 40%)`;
+            break;
+        }
+        
+        container.appendChild(element);
+      }
+    }
+
+    // Apply theme to page
+    function applyTheme(theme) {
+      currentTheme = theme;
+      const root = document.documentElement;
+      
+      root.style.setProperty('--primary-color', theme.primary);
+      root.style.setProperty('--secondary-color', theme.secondary);
+      root.style.setProperty('--accent-color', theme.accent);
+      root.style.setProperty('--background-color', theme.background);
+      root.style.setProperty('--text-color', theme.text);
+      root.style.setProperty('--theme-name', `"${theme.name}"`);
+      
+      // Update theme indicator
+      document.getElementById('currentTheme').textContent = `Theme: ${theme.name}`;
+      document.getElementById('previewThemeName').textContent = theme.name;
+      
+      // Update profile bio if provided
+      if (theme.bio) {
+        document.getElementById('profileBio').textContent = theme.bio;
+      }
+      
+      // Update theme colors preview
+      const themeColors = document.querySelectorAll('.theme-color');
+      if (themeColors.length >= 4) {
+        themeColors[0].style.backgroundColor = theme.primary;
+        themeColors[1].style.backgroundColor = theme.secondary;
+        themeColors[2].style.backgroundColor = theme.accent;
+        themeColors[3].style.backgroundColor = theme.background;
+      }
+      
+      // Create tech animations
+      createTechHeader();
+      createTechFooter();
+      
+      // Create holiday animation
+      if (theme.holidayAnimation) {
+        createHolidayAnimation(theme.holidayAnimation);
+      } else {
+        document.getElementById('holidayBackground').innerHTML = '';
+      }
+      
+      // Save to localStorage for persistence
+      localStorage.setItem('currentTheme', JSON.stringify({
+        theme: theme,
+        appliedDate: currentDate.toISOString().split('T')[0]
+      }));
+      
+      // Show toast for manual theme changes
+      if (theme.isHoliday) {
+        showToast(`🎉 Holiday theme applied: ${theme.name}`);
+      }
+    }
+
+    // Make theme colors clickable
+    function makeThemeColorsClickable() {
+      const themeColors = document.querySelectorAll('.theme-color');
+      
+      themeColors.forEach((colorElement, index) => {
+        // Add click event to edit color
+        colorElement.addEventListener('click', function(e) {
+          e.stopPropagation(); // Prevent closing the theme preview
+          
+          // Remove active class from all colors
+          themeColors.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked color
+          this.classList.add('active');
+          
+          // Determine which color this represents
+          let colorType;
+          switch(index) {
+            case 0: colorType = 'primary'; break;
+            case 1: colorType = 'secondary'; break;
+            case 2: colorType = 'accent'; break;
+            case 3: colorType = 'background'; break;
+          }
+          
+          // Show color picker
+          showColorPicker(colorType, this.style.backgroundColor);
+        });
+      });
+    }
+
+    // Show color picker for custom color editing
+    function showColorPicker(colorType, currentColor) {
+      // Close any existing color picker
+      closeColorPicker();
+      
+      // Create color picker
+      const picker = document.createElement('div');
+      picker.id = 'colorPicker';
+      picker.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--card-background);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        z-index: 1000;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        backdrop-filter: var(--glass-effect);
+        border: 1px solid rgba(255,255,255,0.1);
+        min-width: 250px;
+      `;
+      
+      // Create color picker content
+      picker.innerHTML = `
+        <h4 style="margin-bottom: 15px; color: var(--primary-color);">Customize ${colorType} Color</h4>
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; margin-bottom: 8px; font-size: 12px; color: var(--text-muted);">
+            Enter hex color (e.g., #2ecc71):
+          </label>
+          <input type="color" id="colorInput" value="${currentColor || '#2ecc71'}" 
+                 style="width: 100%; height: 40px; margin-bottom: 10px; cursor: pointer;">
+          <input type="text" id="colorText" placeholder="#2ecc71" 
+                 style="width: 100%; padding: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-color);">
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button onclick="applyCustomColor('${colorType}')" 
+                  style="flex: 1; padding: 10px; background: var(--primary-color); color: white; border: none; border-radius: 8px; cursor: pointer;">
+            Apply
+          </button>
+          <button onclick="closeColorPicker()" 
+                  style="flex: 1; padding: 10px; background: rgba(255,255,255,0.1); color: var(--text-color); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer;">
+            Cancel
+          </button>
+        </div>
+      `;
+      
+      document.body.appendChild(picker);
+      
+      // Set up color input
+      const colorInput = picker.querySelector('#colorInput');
+      const colorText = picker.querySelector('#colorText');
+      
+      // Ensure we have a valid color value
+      const validColor = currentColor && currentColor !== 'undefined' ? currentColor : '#2ecc71';
+      colorInput.value = validColor;
+      colorText.value = validColor;
+      
+      colorInput.addEventListener('input', function() {
+        colorText.value = this.value;
+      });
+      
+      colorText.addEventListener('input', function() {
+        if (this.value.match(/^#[0-9A-F]{6}$/i)) {
+          colorInput.value = this.value;
+        }
+      });
+      
+      // Focus the text input
+      setTimeout(() => {
+        colorText.focus();
+        colorText.select();
+      }, 100);
+    }
+
+    function applyCustomColor(colorType) {
+      const colorText = document.querySelector('#colorText');
+      const newColor = colorText.value;
+      
+      if (newColor && newColor.match(/^#[0-9A-F]{6}$/i)) {
+        // Update CSS variable
+        document.documentElement.style.setProperty(`--${colorType}-color`, newColor);
+        
+        // Update theme preview color
+        const themeColors = document.querySelectorAll('.theme-color');
+        switch(colorType) {
+          case 'primary': 
+            if (themeColors[0]) themeColors[0].style.backgroundColor = newColor; 
+            break;
+          case 'secondary': 
+            if (themeColors[1]) themeColors[1].style.backgroundColor = newColor; 
+            break;
+          case 'accent': 
+            if (themeColors[2]) themeColors[2].style.backgroundColor = newColor; 
+            break;
+          case 'background': 
+            if (themeColors[3]) themeColors[3].style.backgroundColor = newColor; 
+            break;
+        }
+        
+        // Update current theme object
+        if (currentTheme) {
+          currentTheme[colorType] = newColor;
+          currentTheme.name = "Custom Theme";
+          document.getElementById('currentTheme').textContent = `Theme: Custom`;
+          document.getElementById('previewThemeName').textContent = "Custom Theme";
+          
+          // Recreate tech animations with new colors
+          createTechHeader();
+          createTechFooter();
+          
+          showToast(`Custom ${colorType} color applied!`);
+        }
+      } else {
+        alert('Please enter a valid hex color (e.g., #2ecc71)');
+        return;
+      }
+      
+      closeColorPicker();
+    }
+
+    function closeColorPicker() {
+      const picker = document.getElementById('colorPicker');
+      if (picker) {
+        picker.remove();
+      }
+      
+      // Remove active class from theme colors
+      document.querySelectorAll('.theme-color').forEach(c => c.classList.remove('active'));
+    }
+
+    // Initialize with current month's theme
+    function initializeTheme() {
+      // Always use current date
+      const now = new Date();
+      currentDate = now;
+      
+      // Update date display
+      const dateDisplay = document.getElementById('currentDateDisplay');
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      dateDisplay.textContent = now.toLocaleDateString('en-US', options);
+      
+      // Get the PST date for theme selection
+      const pstDate = getPSTDate();
+      
+      // Check localStorage for saved theme
+      const savedTheme = localStorage.getItem('currentTheme');
+      if (savedTheme) {
+        try {
+          const { theme, appliedDate } = JSON.parse(savedTheme);
+          const today = now.toISOString().split('T')[0];
+          
+          // Check if we should use saved theme or update
+          const savedMonth = new Date(appliedDate).getMonth();
+          const currentMonth = now.getMonth();
+          
+          // Only use saved theme if it's from today AND from the same month
+          // This ensures themes change on the 1st of each month
+          if (appliedDate === today && savedMonth === currentMonth) {
+            applyTheme(theme);
+            console.log('Loaded saved theme:', theme.name);
+            return;
+          }
+        } catch (e) {
+          console.log('Error loading saved theme:', e);
+        }
+      }
+      
+      // Apply the theme for today's date
+      const todayTheme = getThemeForDate(pstDate);
+      console.log('Applying theme for PST date:', 
+                  pstDate.getMonth() + 1 + '/' + pstDate.getDate() + '/' + pstDate.getFullYear(), 
+                  'Theme:', todayTheme.name);
+      applyTheme(todayTheme);
+    }
+
+    // Toggle section function
+    function toggleSection(element) {
+      const section = element.parentElement;
+      section.classList.toggle('expanded');
+      element.classList.toggle('expanded');
+    }
+
+    // Toggle theme preview panel
+    function toggleThemePreview() {
+      const preview = document.getElementById('themePreview');
+      isPreviewOpen = !isPreviewOpen;
+      preview.style.display = isPreviewOpen ? 'block' : 'none';
+    }
+
+    // Apply random theme (for testing)
+    function applyRandomTheme() {
+      const months = Object.keys(monthlyThemes);
+      const randomMonth = parseInt(months[Math.floor(Math.random() * months.length)]);
+      const randomTheme = monthlyThemes[randomMonth];
+      applyTheme(randomTheme);
+      showToast(`Random theme applied: ${randomTheme.name}`);
+    }
+
+    // Apply next month's theme
+    function applyNextTheme() {
+      const currentMonth = currentDate.getMonth();
+      const nextMonth = (currentMonth + 1) % 12;
+      const nextTheme = monthlyThemes[nextMonth];
+      applyTheme(nextTheme);
+      showToast(`Next month theme preview: ${nextTheme.name}`);
+    }
+
+    // Reset to current month's theme
+    function resetToMonthlyTheme() {
+      const pstDate = getPSTDate();
+      const todayTheme = getThemeForDate(pstDate);
+      applyTheme(todayTheme);
+      showToast(`Reset to current theme: ${todayTheme.name}`);
+    }
+
+    // Email protection and copy function
+    function revealAndCopyEmail() {
+      try {
+        const fullEmail = 'kara@karas.page';
+        const obfuscatedElement = document.querySelector('.protected-email .obfuscated');
+        
+        // First click reveals email
+        if (obfuscatedElement.textContent === '[Click to reveal email]') {
+          obfuscatedElement.textContent = fullEmail;
+          return;
+        }
+        
+        // Second click copies
+        copyToClipboard(fullEmail, 'Email copied to clipboard!');
+      } catch (err) {
+        console.error('Email copy failed:', err);
+        showToast('Failed to copy email. Please try again.');
+      }
+    }
+
+    // Address copy function
+    function copyAddress() {
+      try {
+        const address = 'PO BOX 1357, LINDSAY, CA 93247';
+        copyToClipboard(address, 'Address copied to clipboard!');
+      } catch (err) {
+        console.error('Address copy failed:', err);
+        showToast('Failed to copy address. Please try again.');
+      }
+    }
+
+    // Improved clipboard function
+    async function copyToClipboard(text, successMessage) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          if (successMessage) showToast(successMessage);
+          return true;
+        }
+        
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        
+        try {
+          const successful = document.execCommand('copy');
+          if (!successful) throw new Error('execCommand failed');
+          if (successMessage) showToast(successMessage);
+          return true;
+        } finally {
+          document.body.removeChild(textarea);
+        }
+      } catch (err) {
+        console.error('Copy failed:', err);
+        showToast('Failed to copy. Please copy manually: ' + text);
+        return false;
+      }
+    }
+
+    // Report profile function
+    function reportProfile() {
+      if (confirm('Are you sure you want to report this profile?')) {
+        showToast('Profile Reported. We\'ll pretend to care. You pretend this matters 🤡');
+      }
+    }
+
+    // Share profile function
+    async function shareProfile() {
+      try {
+        const shareData = {
+          title: 'Kara Danvers | Bio Links',
+          text: 'Check out Kara Danvers\' profile with all her links and content!',
+          url: window.location.href
+        };
+        
+        if (navigator.share) {
+          await navigator.share(shareData)
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing:', error));
+        } else {
+          // Fallback: copy to clipboard
+          await copyToClipboard(window.location.href, 'Link copied to clipboard!');
+        }
+      } catch (err) {
+        console.error('Share failed:', err);
+      }
+    }
+
+    // Toast notification
+    function showToast(message, duration = 3000) {
+      const toast = document.getElementById('toastNotification');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, duration);
+    }
+
+    // Check for theme update at midnight PST
+    function scheduleThemeUpdateCheck() {
+      const now = new Date();
+      const pstNow = getPSTDate();
+      
+      // Calculate milliseconds until next midnight PST
+      const nextMidnight = new Date(pstNow);
+      nextMidnight.setDate(nextMidnight.getDate() + 1);
+      nextMidnight.setHours(0, 0, 0, 0);
+      
+      const msUntilMidnight = nextMidnight.getTime() - pstNow.getTime();
+      
+      console.log('Next theme check scheduled in', Math.round(msUntilMidnight/1000/60), 'minutes');
+      
+      // Set timeout to check at midnight PST
+      setTimeout(() => {
+        // Check if it's the first of the month
+        const newPstDate = getPSTDate();
+        console.log('Theme update check:', newPstDate.getDate(), 'day of month');
+        
+        if (newPstDate.getDate() === 1) {
+          // It's a new month, clear localStorage and update theme
+          localStorage.removeItem('currentTheme');
+          initializeTheme();
+          showToast('🎉 New month, new theme!');
+          console.log('New month detected, theme updated!');
+        }
+        
+        // Schedule next check
+        scheduleThemeUpdateCheck();
+      }, msUntilMidnight);
+    }
+
+    // Initialize page with proper theme auto-change
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, initializing theme system...');
+      console.log('Current date:', new Date().toLocaleString());
+      console.log('Current month:', new Date().getMonth() + 1);
+      
+      // Initialize theme and animations
+      initializeTheme();
+      
+      // Create tech animation
+      createTechAnimation();
+      
+      // Refresh tech animation every 30 seconds
+      setInterval(createTechAnimation, 30000);
+      
+      // Refresh tech header every 60 seconds
+      setInterval(createTechHeader, 60000);
+      
+      // Refresh tech footer every 90 seconds
+      setInterval(createTechFooter, 90000);
+      
+      // Make theme colors clickable
+      makeThemeColorsClickable();
+      
+      // Expand first section by default
+      const firstSection = document.querySelector('.section');
+      if (firstSection) {
+        firstSection.classList.add('expanded');
+        firstSection.querySelector('.section-title').classList.add('expanded');
+      }
+      
+      // Schedule theme update checks - IMPORTANT: This enables auto-change
+      scheduleThemeUpdateCheck();
+      
+      // Add click outside to close theme preview
+      document.addEventListener('click', function(event) {
+        const preview = document.getElementById('themePreview');
+        const themeIndicator = document.querySelector('.theme-indicator');
+        const themeButtons = document.querySelectorAll('.theme-btn, .action-btn.secondary');
+        
+        let isThemeElement = false;
+        themeButtons.forEach(btn => {
+          if (btn.contains(event.target)) isThemeElement = true;
+        });
+        
+        if (preview.style.display === 'block' && 
+            !preview.contains(event.target) && 
+            !themeIndicator.contains(event.target) &&
+            !isThemeElement) {
+          preview.style.display = 'none';
+          isPreviewOpen = false;
+        }
+        
+        // Close color picker if clicking outside
+        const colorPicker = document.getElementById('colorPicker');
+        if (colorPicker && !colorPicker.contains(event.target)) {
+          closeColorPicker();
+        }
+      });
+      
+      // Close preview on escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          if (isPreviewOpen) {
+            toggleThemePreview();
+          }
+          
+          // Also close color picker if open
+          const colorPicker = document.getElementById('colorPicker');
+          if (colorPicker) {
+            closeColorPicker();
+          }
+        }
+      });
+    });
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"d74bfe30601d4a0f97b6069334621f23","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html><a rel="me" href="https://social.vivaldi.net/@KaraDanvers"></a>
