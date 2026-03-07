@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kara Danvers | Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    /* ─── Dynamic Theme Variables (overridden by JS) ─── */
+    :root {
+      --primary:       #2ecc71;
+      --secondary:     #3498db;
+      --accent:        #9b59b6;
+      --bg:            #061a0e;
+      --text:          #ecf0f1;
+      --text-muted:    #7abb8e;
+      --card:          rgba(255,255,255,0.04);
+      --card-hov:      rgba(255,255,255,0.08);
+      --border:        rgba(255,255,255,0.09);
+      --shadow:        rgba(0,0,0,0.55);
+      --glass:         blur(18px);
+      --r-sm:          10px;
+      --r-md:          14px;
+      --r-full:        9999px;
+      --t-fast:        0.15s ease;
+      --t:             0.27s ease;
+      --t-slow:        0.6s ease;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background-color 0.9s ease, color 0.9s ease;
+      position: relative;
+    }
+
+    /* Forest background image */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('media/wallpaper.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.35; /* Adjust this value to control image visibility (0-1) */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    ::selection { background: var(--primary); color: #000; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--card-hov); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* ─── Holiday Particles ─── */
+    .holiday-bg {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 1; overflow: hidden;
+    }
+
+    .snow-dot {
+      position: absolute; background: rgba(255,255,255,0.85); border-radius: 50%;
+      animation: snowFall linear infinite;
+    }
+    @keyframes snowFall {
+      0%   { transform: translateY(-30px) rotate(0deg); opacity: 0; }
+      10%  { opacity: 0.8; }
+      90%  { opacity: 0.8; }
+      100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+    }
+
+    .heart-dot {
+      position: absolute; color: #e84393;
+      animation: heartRise linear infinite;
+    }
+    @keyframes heartRise {
+      0%   { transform: translateY(105vh) rotate(0deg); opacity: 0; }
+      10%  { opacity: 0.9; }
+      90%  { opacity: 0.9; }
+      100% { transform: translateY(-80px) rotate(30deg); opacity: 0; }
+    }
+
+    .bat-dot {
+      position: absolute; font-size: 20px;
+      animation: batFly linear infinite;
+    }
+    @keyframes batFly {
+      0%   { transform: translateX(-100px) scaleX(1); opacity: 0; }
+      5%   { opacity: 0.7; }
+      95%  { opacity: 0.7; }
+      100% { transform: translateX(calc(100vw + 100px)) scaleX(1); opacity: 0; }
+    }
+
+    .confetti-dot {
+      position: absolute; border-radius: 2px;
+      animation: confettiFall linear infinite;
+    }
+    @keyframes confettiFall {
+      0%   { transform: translateY(-50px) rotate(0deg); opacity: 0.9; }
+      100% { transform: translateY(105vh) rotate(720deg); opacity: 0.3; }
+    }
+
+    .firefly-dot {
+      position: absolute; border-radius: 50%;
+      width: 5px; height: 5px;
+      animation: fireflyGlow ease-in-out infinite;
+    }
+    @keyframes fireflyGlow {
+      0%,100% { transform: translate(0,0); opacity: 0.15; box-shadow: 0 0 4px currentColor; }
+      50%      { transform: translate(18px,-22px); opacity: 1;  box-shadow: 0 0 14px currentColor, 0 0 28px currentColor; }
+    }
+
+    .leaf-dot {
+      position: absolute; width: 14px; height: 14px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: leafFall linear infinite;
+    }
+    @keyframes leafFall {
+      0%   { transform: translateY(-60px) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(105vh) rotate(720deg); opacity: 0.2; }
+    }
+
+    .star-dot {
+      position: absolute;
+      animation: starTwinkle ease-in-out infinite;
+    }
+    @keyframes starTwinkle {
+      0%,100% { opacity: 0.15; transform: scale(0.6); }
+      50%      { opacity: 1;    transform: scale(1.3); }
+    }
+
+    .petal-dot {
+      position: absolute; width: 10px; height: 10px;
+      border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+      animation: petalFall linear infinite;
+    }
+    @keyframes petalFall {
+      0%   { transform: translateY(-60px) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(105vh) rotate(360deg); opacity: 0.2; }
+    }
+
+    .bunny-dot {
+      position: absolute;
+      animation: bunnyHop ease-in-out infinite;
+    }
+    @keyframes bunnyHop {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-18px) rotate(8deg); }
+    }
+
+    /* ─── Background Effects ─── */
+    .bg-glow {
+      position: fixed; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      pointer-events: none; z-index: 1;
+      animation: glowSpin 35s linear infinite;
+      transition: background 1.2s ease;
+    }
+    @keyframes glowSpin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .bg-grid {
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none; z-index: 1;
+    }
+
+    /* ─── Theme Indicator ─── */
+    .theme-badge {
+      position: fixed; top: 14px; right: 14px;
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-full);
+      padding: 7px 15px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 11.5px; font-weight: 500;
+      color: var(--text);
+      z-index: 200;
+      display: flex; align-items: center; gap: 7px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px var(--shadow);
+      transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+      white-space: nowrap;
+    }
+    .theme-badge:hover {
+      transform: scale(1.04);
+      border-color: var(--primary);
+      box-shadow: 0 6px 28px var(--shadow);
+    }
+    .theme-badge i { color: var(--primary); font-size: 13px; transition: color var(--t-slow); }
+
+    /* ─── Main ─── */
+    main {
+      position: relative; z-index: 2;
+      max-width: 780px; margin: 0 auto;
+      padding: 0.6rem 0.7rem 1.2rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+
+    /* ─── Tech Animation Layer ─── */
+    .tech-layer {
+      position: absolute; inset: 0;
+      overflow: hidden; border-radius: var(--r-md);
+      pointer-events: none; z-index: 0;
+    }
+    .tech-layer.footer-layer { opacity: 0.45; }
+
+    .tech-grid-bg {
+      position: absolute; width: 200%; height: 200%;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      animation: gridDrift 22s linear infinite; opacity: 0.5;
+    }
+    .footer-layer .tech-grid-bg { background-size: 20px 20px; animation: gridDrift2 32s linear infinite; opacity: 0.25; }
+    @keyframes gridDrift  { 0% { transform: translate(0,0); } 100% { transform: translate(-28px,-28px); } }
+    @keyframes gridDrift2 { 0% { transform: translate(0,0); } 100% { transform: translate(-20px,-20px); } }
+
+    .circuit-wrap { position: absolute; inset: 0; }
+    .c-line {
+      position: absolute;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      height: 1.5px;
+      animation: cFlow 3.2s linear infinite; opacity: 0;
+    }
+    @keyframes cFlow {
+      0%   { width: 0%;   left: 0;    opacity: 0; }
+      8%   { opacity: 0.55; }
+      92%  { opacity: 0.55; }
+      100% { width: 100%; left: 100%; opacity: 0; }
+    }
+    .footer-layer .c-line {
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      height: 1px;
+      animation: cFlowF 4.5s linear infinite;
+    }
+    @keyframes cFlowF {
+      0%   { width: 0%;   left: 0;    opacity: 0; }
+      8%   { opacity: 0.3; }
+      92%  { opacity: 0.3; }
+      100% { width: 100%; left: 100%; opacity: 0; }
+    }
+
+    .dot-wrap { position: absolute; inset: 0; }
+    .c-dot {
+      position: absolute; width: 4px; height: 4px;
+      background: var(--accent); border-radius: 50%;
+      box-shadow: 0 0 7px var(--accent);
+      animation: dotPulse 2.3s ease-in-out infinite; opacity: 0;
+    }
+    @keyframes dotPulse {
+      0%,100% { transform: scale(1);   opacity: 0.25; }
+      50%      { transform: scale(1.8); opacity: 0.85; }
+    }
+
+    .icon-wrap { position: absolute; inset: 0; }
+    .c-icon {
+      position: absolute; font-size: 16px; opacity: 0;
+      animation: iconDrift 9s ease-in-out infinite;
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+    @keyframes iconDrift {
+      0%,100% { transform: translateY(0) rotate(0deg);    opacity: 0.18; }
+      50%      { transform: translateY(-14px) rotate(6deg); opacity: 0.5; }
+    }
+
+    .bin-rain { position: absolute; inset: 0; overflow: hidden; }
+    .bin-d {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 10px; opacity: 0;
+      animation: binFall linear infinite;
+      text-shadow: 0 0 4px currentColor;
+    }
+    @keyframes binFall {
+      0%   { transform: translateY(-30px);  opacity: 0; }
+      8%   { opacity: 0.55; }
+      90%  { opacity: 0.55; }
+      100% { transform: translateY(130px);  opacity: 0; }
+    }
+    .footer-layer .bin-d { font-size: 8px; }
+
+    .holo {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 18%, transparent 82%, rgba(255,255,255,0.1) 100%);
+      animation: holoScan 5s linear infinite; opacity: 0.12;
+    }
+    @keyframes holoScan {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(250%); }
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative; overflow: hidden; isolation: isolate;
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 0.8rem 0.9rem 0.75rem;
+      text-align: center;
+      box-shadow: 0 8px 40px var(--shadow);
+      animation: slideUp 0.65s ease-out;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; width: 100%; height: 90px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      opacity: 0.1; z-index: 0; border-radius: var(--r-md) var(--r-md) 0 0;
+      transition: background 0.9s ease;
+    }
+    .hero-content { position: relative; z-index: 2; }
+
+    .avatar-wrap {
+      position: relative; width: 68px; height: 68px;
+      margin: 0 auto 0.55rem; display: inline-block;
+    }
+    .avatar-ring {
+      position: absolute; inset: -5px; border-radius: 50%; opacity: 0.75;
+      background: conic-gradient(var(--primary), var(--secondary), var(--accent), var(--primary));
+      filter: blur(9px);
+      animation: ringPulse 3.2s ease-in-out infinite;
+    }
+    @keyframes ringPulse {
+      0%,100% { opacity: 0.5;  transform: scale(1); }
+      50%      { opacity: 0.85; transform: scale(1.07); }
+    }
+    .avatar {
+      position: relative; width: 68px; height: 68px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--bg); z-index: 1; display: block;
+    }
+    .avatar-fallback {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #000; z-index: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 700; margin-bottom: 0.18rem; letter-spacing: -0.01em;
+      background: linear-gradient(135deg, var(--text) 40%, var(--primary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: background 0.9s ease;
+    }
+    .tagline {
+      color: var(--text-muted); font-size: 0.76rem; margin-bottom: 0.6rem;
+      transition: color var(--t-slow);
+    }
+
+    /* ─── Social Icons ─── */
+    .social-row {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 0.38rem;
+    }
+    .s-link {
+      display: flex; align-items: center; justify-content: center;
+      width: 33px; height: 33px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      color: var(--text-muted); font-size: 0.88rem;
+      text-decoration: none;
+      transition: all var(--t);
+    }
+    .s-link:hover {
+      background: var(--card-hov); color: var(--text);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+    }
+    .s-link img { width: 18px; height: 18px; object-fit: contain; filter: grayscale(1) brightness(0.7); transition: filter var(--t); }
+    .s-link:hover img { filter: grayscale(0) brightness(1); }
+
+    /* ─── Sections ─── */
+    .section {
+      position: relative; overflow: hidden; isolation: isolate;
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 0.7rem 0.8rem;
+      box-shadow: 0 4px 28px var(--shadow);
+      transition: background var(--t-slow), border-color var(--t-slow);
+    }
+
+    .sec-title {
+      display: flex; align-items: center; gap: 0.42rem;
+      font-size: 0.9rem; font-weight: 600; margin-bottom: 0.22rem;
+      color: var(--text); letter-spacing: 0.02em;
+    }
+    .sec-title i { color: var(--primary); transition: color var(--t-slow); font-size: 0.95rem; }
+
+    /* ─── Platform Cards ─── */
+    .card-list { display: flex; flex-direction: column; gap: 0.28rem; margin-top: 0.3rem; }
+
+    .p-card {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.52rem 0.65rem;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      text-decoration: none; color: var(--text);
+      transition: all var(--t);
+      position: relative; overflow: hidden;
+      cursor: pointer;
+    }
+    .p-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; width: 3px; height: 100%;
+      background: var(--primary); opacity: 0;
+      transition: opacity var(--t);
+    }
+    .p-card:hover {
+      background: rgba(255,255,255,0.055);
+      transform: translateX(5px);
+      border-color: rgba(255,255,255,0.14);
+    }
+    .p-card:hover::before { opacity: 1; }
+    .p-card .arr { margin-left: auto; color: var(--text-muted); font-size: 0.78rem; transition: transform var(--t-fast), color var(--t-fast); }
+    .p-card:hover .arr { transform: translateX(4px); color: var(--primary); }
+
+    .p-icon {
+      width: 33px; height: 33px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 8px; font-size: 1rem;
+    }
+    .p-info { display: flex; flex-direction: column; gap: 0.05rem; }
+    .p-name { font-weight: 600; font-size: 0.82rem; color: var(--text); line-height: 1.2; }
+    .p-desc { font-size: 0.67rem; color: var(--text-muted); line-height: 1.2; }
+
+    /* ─── Notice Boxes ─── */
+    .notice-warn {
+      margin-top: 10px; padding: 10px 13px; border-radius: 8px;
+      font-size: 12.5px; line-height: 1.45;
+      background: rgba(231,76,60,0.08); border-left: 3px solid #e74c3c;
+    }
+    .notice-urgent {
+      margin-top: 10px; padding: 10px 13px; border-radius: 8px;
+      font-size: 12.5px; line-height: 1.45;
+      background: rgba(241,196,15,0.08); border-left: 3px solid #f1c40f;
+    }
+    .notice-head { font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+
+    .protected-email .obfuscated { filter: blur(3.5px); transition: filter 0.35s; user-select: none; }
+    .p-card:hover .obfuscated { filter: blur(0); }
+
+    /* ─── Action Buttons ─── */
+    .action-row { display: flex; gap: 8px; margin: 4px 0; }
+    .action-row .p-card {
+      flex: 1; justify-content: center;
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      padding: 12px;
+    }
+    .action-row .p-card::before { display: none; }
+    .action-row .p-card:hover { transform: translateY(-2px) translateX(0); }
+
+    /* ─── Toast ─── */
+    .toast {
+      position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      color: var(--text); padding: 11px 24px;
+      border-radius: var(--r-full); z-index: 1000; opacity: 0;
+      transition: opacity 0.32s ease; font-size: 13.5px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 36px var(--shadow);
+      pointer-events: none; white-space: nowrap;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      position: relative; overflow: hidden; isolation: isolate;
+      background: var(--card);
+      backdrop-filter: var(--glass);
+      -webkit-backdrop-filter: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 0.6rem 0.8rem;
+      text-align: center; color: var(--text-muted); font-size: 0.68rem;
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+    .footer p { position: relative; z-index: 2; }
+    .footer a { color: var(--primary); text-decoration: none; font-weight: 500; transition: color var(--t-fast); }
+    .footer a:hover { color: var(--accent); }
+
+    /* ─── Animations ─── */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero    { animation: slideUp 0.6s ease-out; }
+    .section { animation: slideUp 0.6s ease-out both; }
+    .section:nth-child(2) { animation-delay: 0.07s; }
+    .section:nth-child(3) { animation-delay: 0.14s; }
+    .section:nth-child(4) { animation-delay: 0.21s; }
+    .section:nth-child(5) { animation-delay: 0.28s; }
+    .footer { animation: slideUp 0.6s ease-out 0.35s both; }
+
+    /* ─── Responsive ─── */
+    @media (min-width: 580px) {
+      main { padding: 0.6rem 1.4rem 1.2rem; gap: 0.5rem; }
+
+      .card-list { flex-direction: row; flex-wrap: wrap; gap: 0.3rem; }
+      .p-card {
+        flex: 1 1 calc(50% - 0.15rem);
+        flex-direction: column; text-align: center;
+        padding: 0.55rem 0.45rem;
+      }
+      .p-card::before { width: 100%; height: 3px; top: auto; bottom: 0; left: 0; }
+      .p-card:hover { transform: translateY(-4px) translateX(0); }
+      .p-card .arr { display: none; }
+      .p-icon { margin: 0 auto; }
+      .p-info { align-items: center; margin-top: 0.28rem; }
+    }
+    @media (min-width: 768px) {
+      main { padding: 0.6rem 2rem 1.2rem; }
+      .p-card { flex: 1 1 calc(33.33% - 0.2rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Holiday Particles Layer -->
+  <div class="holiday-bg" id="holidayBg"></div>
+
+  <!-- Ambient Background -->
+  <div class="bg-glow" id="bgGlow"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Theme Indicator -->
+  <div class="theme-badge" id="themeBadge" onclick="previewNextTheme()" title="Click to preview next month">
+    <i class="fas fa-palette"></i>
+    <span id="themeLabel">Loading…</span>
+  </div>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <header class="hero">
+      <div class="tech-layer" id="heroLayer"></div>
+      <div class="hero-content">
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <img src="media/profile.jpg" alt="Kara Danvers" class="avatar"
+               onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Kara+Danvers&background=2ecc71&color=000&bold=true&size=200';">
+          <div class="avatar-fallback"><i class="fas fa-user"></i></div>
+        </div>
+        <h1>Kara Danvers</h1>
+        <p class="tagline" id="profileBio">Content Creator • Tech Enthusiast • Holiday Lover</p>
+
+        <div class="social-row">
+          <a href="https://www.youtube.com/@DanversKara"                               title="YouTube"       target="_blank" class="s-link"><i class="fab fa-youtube"></i></a>
+          <a href="https://social.chiefgyk3d.com/@KaraDanvers"                         title="Mastodon"      target="_blank" class="s-link"><i class="fab fa-mastodon"></i></a>
+          <a href="https://social.vivaldi.net/@KaraDanvers"                            title="Vivaldi Social" target="_blank" class="s-link"><i class="fab fa-mastodon"></i></a>
+          <a href="https://bsky.app/profile/karadanvers.bsky.social"                   title="Bluesky"       target="_blank" class="s-link"><img src="media/bluesky.png" alt="Bluesky"></a>
+          <a href="https://vido.social/@karadanvers"                                   title="Loops"         target="_blank" class="s-link"><i class="fas fa-play-circle"></i></a>
+          <a href="https://github.com/DanversKara"                                     title="GitHub"        target="_blank" class="s-link"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══ SOCIAL MEDIA ═══ -->
+    <section class="section">
+      <h2 class="sec-title"><i class="fas fa-globe"></i> Social Media</h2>
+      <div class="card-list">
+        <a href="https://www.youtube.com/@DanversKara" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(255,0,0,.14);color:#ff0000"><i class="fab fa-youtube"></i></div>
+          <div class="p-info"><span class="p-name">YouTube</span><span class="p-desc">Subscribe for tech reviews and tutorials</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://social.chiefgyk3d.com/@KaraDanvers" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(99,100,255,.14);color:#6364ff"><i class="fab fa-mastodon"></i></div>
+          <div class="p-info"><span class="p-name">Mastodon</span><span class="p-desc">Follow me on the fediverse</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://social.vivaldi.net/@KaraDanvers" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(232,68,68,.14);color:#e84444"><i class="fab fa-mastodon"></i></div>
+          <div class="p-info"><span class="p-name">Vivaldi Social</span><span class="p-desc">Follow me on the fediverse</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://bsky.app/profile/karadanvers.bsky.social" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(10,128,255,.14);color:#0a80ff"><i class="fas fa-cloud"></i></div>
+          <div class="p-info"><span class="p-name">Bluesky</span><span class="p-desc">Connect with me on Bluesky</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://vido.social/@karadanvers" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(156,39,176,.14);color:#9c27b0"><i class="fas fa-play-circle"></i></div>
+          <div class="p-info"><span class="p-name">Loops Streaming</span><span class="p-desc">Federated open-source video streaming</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+      </div>
+      <div class="notice-warn">
+        <div class="notice-head" style="color:#e74c3c"><i class="fas fa-exclamation-triangle"></i> IDENTITY NOTICE</div>
+        <p style="color:var(--text-muted)">I'M NOT ON X-TWITTER, FACEBOOK, INSTAGRAM, THREADS, WHATSAPP, TELEGRAM, TIKTOK - Any profile you find there is <strong>ISN'T ME</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT INFO ═══ -->
+    <section class="section">
+      <h2 class="sec-title"><i class="fas fa-envelope"></i> Contact Info</h2>
+      <div class="card-list">
+        <div class="p-card" onclick="revealAndCopyEmail()">
+          <div class="p-icon" style="background:rgba(46,204,113,.14);color:#2ecc71"><i class="fas fa-mail-bulk"></i></div>
+          <div class="p-info">
+            <span class="p-name">Email Address</span>
+            <span class="p-desc protected-email"><span class="obfuscated">[Click to reveal email]</span></span>
+          </div>
+          <i class="fas fa-chevron-right arr"></i>
+        </div>
+        <div class="p-card" onclick="copyAddress()">
+          <div class="p-icon" style="background:rgba(52,152,219,.14);color:#3498db"><i class="fas fa-home"></i></div>
+          <div class="p-info"><span class="p-name">PO Box Address</span><span class="p-desc">PO BOX 1357, LINDSAY, CA 93247</span></div>
+          <i class="fas fa-chevron-right arr"></i>
+        </div>
+        <a href="https://signal.group/#CjQKIOf90ialIxiQXubuqSKzyA-andhQqr94c6T943fmr5wOEhA6zSJZXLfxSAZ7XAIdcHV4" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(0,183,241,.14);color:#00b7f1"><i class="fas fa-comment-dots"></i></div>
+          <div class="p-info"><span class="p-name">Signal.org</span><span class="p-desc">Video calling, chats, groups &amp; more</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+      </div>
+      <div class="notice-urgent">
+        <div class="notice-head" style="color:#f1c40f"><i class="fas fa-exclamation-circle"></i> EMAIL NOTICE</div>
+        <p style="color:var(--text-muted)">Unsolicited emails are automatically deleted, rarely read, and often reported as spam. If you're feeling bold, send a self-addressed stamped envelope to our P.O. Box. Waste your own postage, not our time.</p>
+      </div>
+    </section>
+
+    <!-- ═══ MISC. Links ═══ -->
+    <section class="section">
+      <h2 class="sec-title"><i class="fas fa-cog"></i> MISC. Links</h2>
+      <div class="card-list">
+        <a href="https://www.wattpad.com/user/KarasPage" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(255,66,77,.14);color:#ff424d"><i class="fas fa-book-open"></i></div>
+          <div class="p-info"><span class="p-name">Kara's Books</span><span class="p-desc">Read my stories on Wattpad</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://www.amazon.com/hz/wishlist/ls/ILIK40MLBUKX" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(255,153,0,.14);color:#ff9900"><i class="fas fa-gift"></i></div>
+          <div class="p-info"><span class="p-name">Amazon Wishlist</span><span class="p-desc">Send a gift if you're feeling generous</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1Bn2uKqPepcsobqWnVM6LrqnCYX2K93b5?usp=sharing" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(52,168,83,.14);color:#34a853"><i class="fab fa-google-drive"></i></div>
+          <div class="p-info"><span class="p-name">ScamAzon at Amazon</span><span class="p-desc">Documentation of Amazon scams</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+        <a href="https://karasprofile.blogspot.com/2025/12/you-have-to-watch-out-for-possible.html" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(241,196,15,.14);color:#f1c40f"><i class="fas fa-bug"></i></div>
+          <div class="p-info"><span class="p-name">Roblox Scams</span><span class="p-desc">Watch out for possible scams</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ REFERRALS ═══ -->
+    <section class="section">
+      <h2 class="sec-title"><i class="fas fa-link"></i> Curated Referral Links</h2>
+      <div class="card-list">
+        <a href="https://myref.info/" target="_blank" class="p-card">
+          <div class="p-icon" style="background:rgba(155,89,182,.14);color:#9b59b6"><i class="fas fa-link"></i></div>
+          <div class="p-info"><span class="p-name">All My Referral Links</span><span class="p-desc">A curated collection of all my links 🔗</span></div>
+          <i class="fas fa-arrow-right arr"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ ACTION BUTTONS ═══ -->
+    <div class="action-row">
+      <button class="p-card" onclick="shareProfile()">
+        <i class="fas fa-share-alt" style="color:var(--primary);margin-right:7px"></i>
+        <span class="p-name">SHARE PAGE</span>
+      </button>
+      <button class="p-card" onclick="reportProfile()">
+        <i class="fas fa-flag" style="color:#e74c3c;margin-right:7px"></i>
+        <span class="p-name">REPORT</span>
+      </button>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="tech-layer footer-layer" id="footerLayer"></div>
+      <p>© 2026 Kara Danvers. All links are verified and safe.</p>
+      <p style="margin-top:4px;font-size:10px;opacity:0.55" id="dateDisplay"></p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+  /* ══════════════════════════════════════════
+     MONTHLY THEME SYSTEM
+  ══════════════════════════════════════════ */
+  const THEMES = {
+    0:  { name:"Winter Frost",       primary:"#3498db", secondary:"#1abc9c", accent:"#9b59b6", bg:"#060d1c", text:"#ecf0f1", muted:"#7ba8cc", bio:"Embracing winter with fresh tech insights ❄️",              fx:"snow"      },
+    1:  { name:"Valentine's Love",   primary:"#e74c3c", secondary:"#e84393", accent:"#fd79a8", bg:"#180608", text:"#fdf2f8", muted:"#c07898", bio:"Spreading love and tech tips this Valentine's season 💖",    fx:"hearts"    },
+    2:  { name:"St. Patrick's Day",  primary:"#2ecc71", secondary:"#f1c40f", accent:"#27ae60", bg:"#031008", text:"#ecf0f1", muted:"#6aba80", bio:"Feeling lucky with new tech discoveries! 🍀",                fx:"fireflies"  },
+    3:  { name:"Easter",             primary:"#9b59b6", secondary:"#e84393", accent:"#f1c40f", bg:"#130820", text:"#f8f9fa", muted:"#a880c8", bio:"Fresh tech reviews and creative experiments 🌼",             fx:"bunnies"   },
+    4:  { name:"May Flowers",        primary:"#e91e8c", secondary:"#9b59b6", accent:"#1abc9c", bg:"#100618", text:"#f8f9fa", muted:"#c070b0", bio:"Blooming with new content and discoveries 🌺",               fx:"petals"    },
+    5:  { name:"Summer Pride",       primary:"#e74c3c", secondary:"#f39c12", accent:"#3498db", bg:"#180608", text:"#ffffff", muted:"#c09080", bio:"Celebrating diversity in tech this Pride month 🌈",          fx:"fireflies"  },
+    6:  { name:"4th of July",        primary:"#e74c3c", secondary:"#3498db", accent:"#f1c40f", bg:"#060c18", text:"#ffffff", muted:"#8090b8", bio:"Celebrating freedom and innovation! 🇺🇸",                    fx:"stars"     },
+    7:  { name:"Summer Heat",        primary:"#e67e22", secondary:"#e74c3c", accent:"#f1c40f", bg:"#140a02", text:"#fdf2e9", muted:"#c08060", bio:"Enjoying summer vibes with hot tech takes 🌅",              fx:"fireflies"  },
+    8:  { name:"Labor Day",          primary:"#d35400", secondary:"#3498db", accent:"#f1c40f", bg:"#0a1414", text:"#ecf0f1", muted:"#809898", bio:"Honoring hard work and innovation 🔧",                       fx:"leaves"    },
+    9:  { name:"Halloween",          primary:"#9b59b6", secondary:"#f1c40f", accent:"#e74c3c", bg:"#0c0608", text:"#f8f9fa", muted:"#8860a8", bio:"Spooky tech tricks and treats! 🎃👻",                        fx:"bats"      },
+    10: { name:"Thanksgiving",       primary:"#d35400", secondary:"#f39c12", accent:"#27ae60", bg:"#140c04", text:"#fdf2e9", muted:"#c08840", bio:"Grateful for tech and community 🦃",                        fx:"leaves"    },
+    11: { name:"Christmas",          primary:"#e74c3c", secondary:"#2ecc71", accent:"#f1c40f", bg:"#020802", text:"#ffffff", muted:"#88b888", bio:"Spreading holiday cheer with tech gifts 🎄",                 fx:"snow"      },
+  };
+
+  const OVERRIDES = {
+    "01-01": { name:"New Year's Day",   primary:"#3498db", secondary:"#9b59b6", accent:"#1abc9c", bg:"#060c20", text:"#ecf0f1", bio:"Happy New Year! 🎉",                   fx:"confetti"  },
+    "02-14": { name:"Valentine's Day",  primary:"#e84393", secondary:"#e74c3c", accent:"#fd79a8", bg:"#180608", text:"#fdf2f8", bio:"Happy Valentine's Day! 💝",             fx:"hearts"    },
+    "03-17": { name:"St. Patrick's Day",primary:"#2ecc71", secondary:"#27ae60", accent:"#f1c40f", bg:"#031008", text:"#ffffff", bio:"Happy St. Patrick's Day! 🍀",           fx:"fireflies"  },
+    "10-31": { name:"Halloween",        primary:"#f1c40f", secondary:"#9b59b6", accent:"#e74c3c", bg:"#080308", text:"#f8f9fa", bio:"Happy Halloween! 🎃",                   fx:"bats"      },
+    "12-25": { name:"Christmas",        primary:"#e74c3c", secondary:"#2ecc71", accent:"#f1c40f", bg:"#020602", text:"#ffffff", bio:"Merry Christmas! 🎄",                   fx:"snow"      },
+    "12-31": { name:"New Year's Eve",   primary:"#9b59b6", secondary:"#3498db", accent:"#f1c40f", bg:"#080818", text:"#ffffff", bio:"Happy New Year's Eve! 🥂",             fx:"confetti"  },
+  };
+
+  function getPSTDate() {
+    const now = new Date();
+    const jan = new Date(now.getFullYear(), 0, 1);
+    const jul = new Date(now.getFullYear(), 6, 1);
+    const stdOff = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+    const isDST  = now.getTimezoneOffset() < stdOff;
+    const pstOff = isDST ? -7 * 60 : -8 * 60;
+    return new Date(now.getTime() + (now.getTimezoneOffset() + pstOff) * 60000);
+  }
+
+  function applyTheme(t) {
+    const r = document.documentElement;
+    r.style.setProperty('--primary',   t.primary);
+    r.style.setProperty('--secondary', t.secondary);
+    r.style.setProperty('--accent',    t.accent);
+    r.style.setProperty('--bg',        t.bg);
+    r.style.setProperty('--text',      t.text   || '#ecf0f1');
+    r.style.setProperty('--text-muted',t.muted  || '#95a5a6');
+
+    // Dynamic background glow
+    const glow = document.getElementById('bgGlow');
+    if (glow) glow.style.background = `
+      radial-gradient(ellipse at 20% 20%, ${t.primary}12 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, ${t.secondary}0e 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, ${t.accent}09  0%, transparent 50%)`;
+
+    // Theme label
+    const lbl = document.getElementById('themeLabel');
+    if (lbl) lbl.textContent = t.name;
+
+    // Bio tagline
+    if (t.bio) {
+      const bio = document.getElementById('profileBio');
+      if (bio) bio.textContent = t.bio;
+    }
+
+    buildTechLayer('heroLayer',   18, 3);
+    buildTechLayer('footerLayer', 8,  2);
+    buildHolidayFx(t.fx || '');
+  }
+
+  function initTheme() {
+    const pst = getPSTDate();
+    const mm  = String(pst.getMonth() + 1).padStart(2,'0');
+    const dd  = String(pst.getDate()).padStart(2,'0');
+    const key = `${mm}-${dd}`;
+    applyTheme(OVERRIDES[key] || THEMES[pst.getMonth()]);
+  }
+
+  /* Preview next month's theme on badge click */
+  let _previewIdx = -1;
+  function previewNextTheme() {
+    const pst = getPSTDate();
+    if (_previewIdx < 0) _previewIdx = pst.getMonth();
+    _previewIdx = (_previewIdx + 1) % 12;
+    applyTheme(THEMES[_previewIdx]);
+    showToast(`Preview: ${THEMES[_previewIdx].name} 🎨`);
+  }
+
+  /* ══════════════════════════════════════════
+     TECH ANIMATION BUILDER
+  ══════════════════════════════════════════ */
+  function buildTechLayer(id, binCount, lineCount) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = '';
+    const p = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+    const s = getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim();
+    const a = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+
+    // Grid
+    const grid = document.createElement('div');
+    grid.className = 'tech-grid-bg';
+    el.appendChild(grid);
+
+    // Circuit lines
+    const cw = document.createElement('div'); cw.className = 'circuit-wrap';
+    for (let i = 0; i < lineCount; i++) {
+      const ln = document.createElement('div'); ln.className = 'c-line';
+      ln.style.top   = `${15 + i * (65 / lineCount)}%`;
+      ln.style.animationDelay = `${i * 1.1}s`;
+      cw.appendChild(ln);
+    }
+    el.appendChild(cw);
+
+    // Data dots
+    const dw = document.createElement('div'); dw.className = 'dot-wrap';
+    for (let i = 0; i < 8; i++) {
+      const d = document.createElement('div'); d.className = 'c-dot';
+      d.style.left  = `${Math.random() * 96}%`;
+      d.style.top   = `${Math.random() * 90}%`;
+      d.style.animationDelay = `${Math.random() * 2.5}s`;
+      dw.appendChild(d);
+    }
+    el.appendChild(dw);
+
+    // Icons
+    const iw = document.createElement('div'); iw.className = 'icon-wrap';
+    const iconSet = ['fas fa-microchip','fas fa-code','fas fa-server','fas fa-terminal','fas fa-wifi','fas fa-database'];
+    const clrs = [p, s, a];
+    for (let i = 0; i < 4; i++) {
+      const ic = document.createElement('i');
+      ic.className = `c-icon ${iconSet[i % iconSet.length]}`;
+      ic.style.top   = `${8  + Math.random() * 75}%`;
+      ic.style.left  = `${5  + Math.random() * 88}%`;
+      ic.style.color = clrs[i % 3];
+      ic.style.animationDelay = `${Math.random() * 6}s`;
+      iw.appendChild(ic);
+    }
+    el.appendChild(iw);
+
+    // Binary rain
+    const br = document.createElement('div'); br.className = 'bin-rain';
+    for (let i = 0; i < binCount; i++) {
+      const d = document.createElement('span'); d.className = 'bin-d';
+      d.textContent = Math.random() > 0.5 ? '1' : '0';
+      d.style.left  = `${Math.random() * 100}%`;
+      d.style.animationDuration = `${Math.random() * 3.5 + 2.5}s`;
+      d.style.animationDelay    = `${Math.random() * 6}s`;
+      d.style.color = Math.random() > 0.5 ? p : s;
+      br.appendChild(d);
+    }
+    el.appendChild(br);
+    setInterval(() => br.querySelectorAll('.bin-d').forEach(d => { d.textContent = Math.random() > 0.5 ? '1' : '0'; }), 1100);
+
+    // Hologram sweep
+    const h = document.createElement('div'); h.className = 'holo';
+    el.appendChild(h);
+  }
+
+  /* ══════════════════════════════════════════
+     HOLIDAY PARTICLE EFFECTS
+  ══════════════════════════════════════════ */
+  function buildHolidayFx(type) {
+    const c = document.getElementById('holidayBg');
+    if (!c) return;
+    c.innerHTML = '';
+
+    const FXMAP = {
+      snow: () => {
+        for (let i = 0; i < 45; i++) {
+          const el = document.createElement('div'); el.className = 'snow-dot';
+          const sz = Math.random() * 4 + 2;
+          Object.assign(el.style, { width:`${sz}px`, height:`${sz}px`, left:`${Math.random()*100}%`, top:`${-Math.random()*20}%`, animationDuration:`${Math.random()*7+5}s`, animationDelay:`${Math.random()*7}s`, opacity:`${Math.random()*0.6+0.2}` });
+          c.appendChild(el);
+        }
+      },
+      hearts: () => {
+        for (let i = 0; i < 22; i++) {
+          const el = document.createElement('div'); el.className = 'heart-dot'; el.textContent = '♥';
+          Object.assign(el.style, { left:`${Math.random()*100}%`, fontSize:`${Math.random()*14+9}px`, animationDuration:`${Math.random()*5+4}s`, animationDelay:`${Math.random()*7}s`, opacity:`${Math.random()*0.5+0.3}` });
+          c.appendChild(el);
+        }
+      },
+      bats: () => {
+        for (let i = 0; i < 14; i++) {
+          const el = document.createElement('div'); el.className = 'bat-dot'; el.textContent = '🦇';
+          Object.assign(el.style, { top:`${Math.random()*55+5}%`, fontSize:`${Math.random()*10+14}px`, animationDuration:`${Math.random()*5+4}s`, animationDelay:`${Math.random()*9}s` });
+          c.appendChild(el);
+        }
+      },
+      confetti: () => {
+        const clrs = ['#e74c3c','#3498db','#f1c40f','#2ecc71','#9b59b6','#e84393'];
+        for (let i = 0; i < 55; i++) {
+          const el = document.createElement('div'); el.className = 'confetti-dot';
+          Object.assign(el.style, { left:`${Math.random()*100}%`, width:`${Math.random()*8+4}px`, height:`${Math.random()*14+6}px`, background:clrs[i%clrs.length], borderRadius:Math.random()>.5?'50%':'2px', animationDuration:`${Math.random()*4+3}s`, animationDelay:`${Math.random()*5}s` });
+          c.appendChild(el);
+        }
+      },
+      fireflies: () => {
+        const p = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+        const s = getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim();
+        for (let i = 0; i < 28; i++) {
+          const el = document.createElement('div'); el.className = 'firefly-dot';
+          Object.assign(el.style, { left:`${Math.random()*100}%`, top:`${Math.random()*100}%`, background: i%2===0 ? p : s, color: i%2===0 ? p : s, animationDuration:`${Math.random()*3+2}s`, animationDelay:`${Math.random()*4}s` });
+          c.appendChild(el);
+        }
+      },
+      leaves: () => {
+        const clrs = ['#d35400','#e67e22','#c0392b','#a04000','#935116'];
+        for (let i = 0; i < 28; i++) {
+          const el = document.createElement('div'); el.className = 'leaf-dot';
+          Object.assign(el.style, { left:`${Math.random()*100}%`, background:clrs[i%clrs.length], animationDuration:`${Math.random()*5+4}s`, animationDelay:`${Math.random()*7}s`, opacity:'0.7' });
+          c.appendChild(el);
+        }
+      },
+      stars: () => {
+        const syms = ['★','✦','✧','⋆','✶'];
+        const clrs = ['#f1c40f','#e74c3c','#3498db','#ffffff'];
+        for (let i = 0; i < 35; i++) {
+          const el = document.createElement('div'); el.className = 'star-dot'; el.textContent = syms[i%syms.length];
+          Object.assign(el.style, { left:`${Math.random()*100}%`, top:`${Math.random()*100}%`, color:clrs[i%clrs.length], fontSize:`${Math.random()*16+8}px`, animationDuration:`${Math.random()*2+1}s`, animationDelay:`${Math.random()*3}s` });
+          c.appendChild(el);
+        }
+      },
+      petals: () => {
+        const clrs = ['#ff6b9d','#ffd166','#ff85b3','#ffb347'];
+        for (let i = 0; i < 22; i++) {
+          const el = document.createElement('div'); el.className = 'petal-dot';
+          Object.assign(el.style, { left:`${Math.random()*100}%`, background:clrs[i%clrs.length], animationDuration:`${Math.random()*5+4}s`, animationDelay:`${Math.random()*7}s`, opacity:'0.72' });
+          c.appendChild(el);
+        }
+      },
+      bunnies: () => {
+        for (let i = 0; i < 8; i++) {
+          const el = document.createElement('div'); el.className = 'bunny-dot'; el.textContent = i%2===0?'🐰':'🥚';
+          Object.assign(el.style, { left:`${Math.random()*88+2}%`, top:`${60+Math.random()*30}%`, fontSize:`${Math.random()*12+16}px`, animationDuration:`${Math.random()*0.9+0.7}s`, animationDelay:`${Math.random()*2}s`, opacity:'0.62' });
+          c.appendChild(el);
+        }
+      },
+    };
+
+    if (FXMAP[type]) FXMAP[type]();
+  }
+
+  /* ══════════════════════════════════════════
+     UTILITY FUNCTIONS
+  ══════════════════════════════════════════ */
+  function revealAndCopyEmail() {
+    try {
+      const email = 'support@karas.page';
+      const obf   = document.querySelector('.protected-email .obfuscated');
+      if (obf && obf.textContent === '[Click to reveal email]') { obf.textContent = email; return; }
+      copyToClipboard(email, 'Email copied to clipboard!');
+    } catch { showToast('Failed to copy email.'); }
+  }
+
+  function copyAddress() { copyToClipboard('PO BOX 1357, LINDSAY, CA 93247', 'Address copied to clipboard!'); }
+
+  async function copyToClipboard(text, msg) {
+    try {
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(text);
+        if (msg) showToast(msg);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text; Object.assign(ta.style, { position:'fixed', opacity:'0' });
+        document.body.appendChild(ta); ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        if (msg) showToast(msg);
+      }
+    } catch { showToast('Copy manually: ' + text); }
+  }
+
+  function reportProfile() {
+    if (confirm('Are you sure you want to report this profile?')) showToast("Profile Reported. We'll pretend to care. 🤡");
+  }
+
+  async function shareProfile() {
+    try {
+      if (navigator.share) await navigator.share({ title:'Kara Danvers', text:"Check out Kara's profile!", url: location.href });
+      else copyToClipboard(location.href, 'Link copied to clipboard!');
+    } catch(e) { console.log(e); }
+  }
+
+  function showToast(msg, dur = 3200) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.style.opacity = '1';
+    setTimeout(() => t.style.opacity = '0', dur);
+  }
+
+  function updateDate() {
+    const el = document.getElementById('dateDisplay');
+    if (el) el.textContent = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  }
+
+  /* ══════════════════════════════════════════
+     INIT
+  ══════════════════════════════════════════ */
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    updateDate();
+
+    // Auto-refresh theme at midnight PST
+    function scheduleMidnightCheck() {
+      const pst  = getPSTDate();
+      const next = new Date(pst); next.setDate(next.getDate() + 1); next.setHours(0,0,0,0);
+      setTimeout(() => { initTheme(); scheduleMidnightCheck(); }, next - pst);
+    }
+    scheduleMidnightCheck();
+  });
+  </script>
+</body>
+</html>
